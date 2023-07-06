@@ -43,8 +43,6 @@ class Peta extends ResourceController
     {
         $id_peta = $this->PetaModel->get_peta($id);
         $fileName = $id_peta->nama_file;
-        // dd($fileName);
-        $image_path = WRITEPATH . 'storage/file_scan/' . $fileName;
 
         if (file_exists(WRITEPATH . 'storage/file_scan/' . $fileName) && $fileName != null) {
             // if (file_exists($fileName !== null)) {
@@ -62,7 +60,6 @@ class Peta extends ResourceController
                 'image_path' => img_data(WRITEPATH . 'storage/file_scan/no_image.png'),
                 'file_name' => $fileName,
                 'message' => 500,
-                // 'link' => directory_mirror($fileName, $image_path)
             ];
         }
         return view('Peta/detil_peta', $data);
@@ -204,7 +201,14 @@ class Peta extends ResourceController
 
         $_fileName_ = $fileName . '.' . $extention;
 
-        $file->move(WRITEPATH . 'storage/file_scan', $_fileName_);
+        // resize gambar
+        $image = \Config\Services::image()
+            ->withFile($file)
+            ->resize(1500, 1500, true, 'height')
+            ->save(WRITEPATH . 'storage/file_scan/' . $_fileName_);
+
+        // memindahkan file original ke folder original
+        $file->move(WRITEPATH . 'storage/original_file/', $_fileName_);
 
         $save = $this->FileScanModel->save([
             'fk_peta' => $this->request->getPost('id_peta'),

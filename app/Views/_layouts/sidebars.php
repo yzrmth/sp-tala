@@ -9,5 +9,4 @@
         </ul>
     <li class="menu-header">Master Data</li>
     </li>
-
 </ul>
