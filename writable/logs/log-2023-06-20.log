@@ -1,0 +1,56 @@
+CRITICAL - 2023-06-20 11:41:18 --> Call to a member function getName() on null
+in APPPATH\Controllers\Peta.php on line 159.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-20 11:42:35 --> Call to a member function getName() on null
+in APPPATH\Controllers\Peta.php on line 159.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-20 11:46:34 --> Call to a member function getName() on null
+in APPPATH\Controllers\Peta.php on line 159.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-20 11:47:11 --> Call to a member function getName() on null
+in APPPATH\Controllers\Peta.php on line 159.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-20 11:50:29 --> Call to a member function getName() on null
+in APPPATH\Controllers\Peta.php on line 159.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-20 11:54:03 --> Call to a member function move() on null
+in APPPATH\Controllers\Peta.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-20 13:35:08 --> Call to a member function move() on null
+in APPPATH\Controllers\Peta.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-20 13:35:58 --> Call to a member function move() on null
+in APPPATH\Controllers\Peta.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')

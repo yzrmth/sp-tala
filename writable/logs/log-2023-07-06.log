@@ -1,0 +1,22 @@
+CRITICAL - 2023-07-06 01:29:12 --> File not found: "C:\xampp\htdocs\sp-tala\writable\storage/file_digitasi/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.dwg"
+in SYSTEMPATH\Files\File.php on line 47.
+ 1 SYSTEMPATH\Files\File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('C:\\xampp\\htdocs\\sp-tala\\writable\\storage/file_digitasi/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.dwg')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(97): CodeIgniter\Files\File->__construct('C:\\xampp\\htdocs\\sp-tala\\writable\\storage/file_digitasi/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.dwg', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(804): CodeIgniter\HTTP\DownloadResponse->setFilePath('C:\\xampp\\htdocs\\sp-tala\\writable\\storage/file_digitasi/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.dwg')
+ 4 APPPATH\Controllers\Peta.php(180): CodeIgniter\HTTP\Response->download('00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.dwg', null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->do_download_digitasi('707')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-07-06 01:34:10 --> File not found: "C:\xampp\htdocs\sp-tala\writable\storage/file_digitasi/"
+in SYSTEMPATH\Files\File.php on line 47.
+ 1 SYSTEMPATH\Files\File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('C:\\xampp\\htdocs\\sp-tala\\writable\\storage/file_digitasi/')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(97): CodeIgniter\Files\File->__construct('C:\\xampp\\htdocs\\sp-tala\\writable\\storage/file_digitasi/', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(804): CodeIgniter\HTTP\DownloadResponse->setFilePath('C:\\xampp\\htdocs\\sp-tala\\writable\\storage/file_digitasi/')
+ 4 APPPATH\Controllers\Peta.php(180): CodeIgniter\HTTP\Response->download('', null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->do_download_digitasi('4156')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')

@@ -1,0 +1,189 @@
+CRITICAL - 2023-06-23 05:40:01 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Peta.php(190): CodeIgniter\HTTP\Files\UploadedFile->move('C:\\xampp\\htdocs\\sp-tala\\public\\storage\\file_scan/', 'TRANS_BLOK_D.')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('2297')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 08:51:32 --> File not found: "storage/file_digitasi/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_5.dwg"
+in SYSTEMPATH\Files\File.php on line 47.
+ 1 SYSTEMPATH\Files\File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('storage/file_digitasi/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_5.dwg')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(97): CodeIgniter\Files\File->__construct('storage/file_digitasi/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_5.dwg', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(804): CodeIgniter\HTTP\DownloadResponse->setFilePath('storage/file_digitasi/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_5.dwg')
+ 4 APPPATH\Controllers\Peta.php(162): CodeIgniter\HTTP\Response->download('000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_5.dwg', null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->do_download_digitasi('3879')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 09:46:46 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 100.
+ 1 APPPATH\Controllers\Peta.php(100): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 100, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 09:48:08 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 100.
+ 1 APPPATH\Controllers\Peta.php(100): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 100, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 09:50:10 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 100.
+ 1 APPPATH\Controllers\Peta.php(100): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 100, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('3')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 09:52:23 --> unlink(C:\xampp\htdocs\sp-tala\public\storage\file_scan): Is a directory
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage\\file_scan): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage\\file_scan', null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('4')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 09:54:35 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/', null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('5')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 09:57:46 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('6')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 09:58:56 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('7')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 10:00:49 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('8')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 10:05:39 --> unlink(): http does not allow unlinking
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(): http does not allow unlinking', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('http://localhost:81/storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('10')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 10:07:47 --> unlink(storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('11')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 10:09:29 --> unlink(): http does not allow unlinking
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(): http does not allow unlinking', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('http://localhost:81/storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('13')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 10:10:50 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('14')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 11:14:31 --> unlink(storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 101, [...])
+ 2 APPPATH\Controllers\Peta.php(101): unlink('storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('15')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 11:18:37 --> unlink(storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 101, [...])
+ 2 APPPATH\Controllers\Peta.php(101): unlink('storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('17')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 11:19:18 --> unlink(storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 101, [...])
+ 2 APPPATH\Controllers\Peta.php(101): unlink('storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('18')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 15:59:38 --> unlink(storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 102.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 102, [...])
+ 2 APPPATH\Controllers\Peta.php(102): unlink('storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('19')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 16:02:26 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/): Is a directory
+in APPPATH\Controllers\Peta.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/): Is a directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 101, [...])
+ 2 APPPATH\Controllers\Peta.php(101): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('20')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 16:11:18 --> File not found: "storage/file_scan/000_1994_TRANSMIGRASI_TANJUNG_DEWA_2"
+in SYSTEMPATH\Files\File.php on line 47.
+ 1 SYSTEMPATH\Files\File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('storage/file_scan/000_1994_TRANSMIGRASI_TANJUNG_DEWA_2')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(97): CodeIgniter\Files\File->__construct('storage/file_scan/000_1994_TRANSMIGRASI_TANJUNG_DEWA_2', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(804): CodeIgniter\HTTP\DownloadResponse->setFilePath('storage/file_scan/000_1994_TRANSMIGRASI_TANJUNG_DEWA_2')
+ 4 APPPATH\Controllers\Peta.php(160): CodeIgniter\HTTP\Response->download('000_1994_TRANSMIGRASI_TANJUNG_DEWA_2', null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->do_download('4067')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-23 16:20:29 --> Call to undefined method App\Models\FileDigitasiModel::get_terdudukan
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Dashboard.php(33): CodeIgniter\Model->__call('get_terdudukan', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')

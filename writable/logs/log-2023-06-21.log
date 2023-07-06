@@ -1,0 +1,445 @@
+CRITICAL - 2023-06-21 08:48:35 --> Call to a member function move() on null
+in APPPATH\Controllers\Peta.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 08:49:21 --> Call to a member function move() on null
+in APPPATH\Controllers\Peta.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 08:54:46 --> Call to a member function move() on null
+in APPPATH\Controllers\Peta.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 08:56:50 --> Call to a member function move() on null
+in APPPATH\Controllers\Peta.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 16:10:05 --> Call to undefined method App\Models\FileScanModel::get_peta
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Peta.php(173): CodeIgniter\Model->__call('get_peta', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 16:10:39 --> Call to undefined method App\Models\FileScanModel::get_peta
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Peta.php(173): CodeIgniter\Model->__call('get_peta', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 16:18:49 --> Call to undefined method App\Models\FileScanModel::get_peta
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Peta.php(173): CodeIgniter\Model->__call('get_peta', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('492')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+ERROR - 2023-06-21 16:50:09 --> mysqli_sql_exception: Table 'db_spp.tb_image_peta' doesn't exist in C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('ALTER TABLE `tb...', 0)
+#1 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `tb...')
+#2 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `tb...')
+#3 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\Forge.php(771): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `tb...')
+#4 C:\xampp\htdocs\sp-tala\app\Database\Migrations\2023-06-21-164707_AddCloumnDigitasi.php(25): CodeIgniter\Database\Forge->dropColumn('tb_image_peta', 'file_digitasi')
+#5 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\AddCloumnDigitasi->down()
+#6 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(299): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Commands\Database\MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress(5)
+#8 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\sp-tala\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2023-06-21 18:14:35 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('493')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:15:18 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:17:07 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:17:24 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:18:45 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:19:33 --> Trying to get property 'data' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'data\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:20:40 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 109.
+ 1 APPPATH\Controllers\Peta.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 109, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->detilPeta('491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:21:13 --> Trying to get property 'data' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'data\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+ERROR - 2023-06-21 18:22:39 --> mysqli_sql_exception: Not unique table/alias: 'tb_peta_scan' in C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sp-tala\app\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sp-tala\app\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('494')
+#6 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+#7 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+#8 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sp-tala\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-21 18:22:39 --> Not unique table/alias: 'tb_peta_scan'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'494\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'494\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'494\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = :id_peta:', [...], false)
+ 5 APPPATH\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('494')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+ERROR - 2023-06-21 18:23:34 --> mysqli_sql_exception: Not unique table/alias: 'tb_peta_scan' in C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sp-tala\app\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sp-tala\app\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('494')
+#6 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+#7 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+#8 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sp-tala\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-21 18:23:34 --> Not unique table/alias: 'tb_peta_scan'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'494\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'494\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'494\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = :id_peta:', [...], false)
+ 5 APPPATH\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('494')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('494')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+ERROR - 2023-06-21 18:23:40 --> mysqli_sql_exception: Not unique table/alias: 'tb_peta_scan' in C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sp-tala\app\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sp-tala\app\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('493')
+#6 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Peta->show('493')
+#7 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+#8 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sp-tala\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-21 18:23:40 --> Not unique table/alias: 'tb_peta_scan'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'493\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'493\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'493\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = :id_peta:', [...], false)
+ 5 APPPATH\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('493')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('493')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+ERROR - 2023-06-21 18:24:02 --> mysqli_sql_exception: Not unique table/alias: 'tb_peta_scan' in C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sp-tala\app\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sp-tala\app\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('493')
+#6 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Peta->show('493')
+#7 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+#8 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sp-tala\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-21 18:24:02 --> Not unique table/alias: 'tb_peta_scan'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'493\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'493\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = \'493\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_peta_scan`
+JOIN `tb_peta_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `id_peta` = :id_peta:', [...], false)
+ 5 APPPATH\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('493')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('493')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+ERROR - 2023-06-21 18:24:59 --> mysqli_sql_exception: Not unique table/alias: 'tb_image_scan' in C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sp-tala\app\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sp-tala\app\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('493')
+#6 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Peta->show('493')
+#7 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+#8 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sp-tala\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-21 18:24:59 --> Not unique table/alias: 'tb_image_scan'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `tb_image_scan`
+JOIN `tb_image_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `fk_peta` = \'493\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tb_image_scan`
+JOIN `tb_image_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `fk_peta` = \'493\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tb_image_scan`
+JOIN `tb_image_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `fk_peta` = \'493\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_image_scan`
+JOIN `tb_image_scan` ON `tb_peta_scan`.`id_peta`=`tb_image_scan`.`fk_peta`
+WHERE `fk_peta` = :fk_peta:', [...], false)
+ 5 APPPATH\Models\PetaModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peta.php(34): App\Models\PetaModel->get_peta('493')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('493')
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:34:50 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('495')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:35:30 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:35:35 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:35:52 --> Trying to get property 'nama_file' of non-object
+in APPPATH\Controllers\Peta.php on line 35.
+ 1 APPPATH\Controllers\Peta.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_file\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:45:33 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '495')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:46:07 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '495')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:46:53 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '495')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:47:28 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:48:38 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:48:40 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:48:43 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('515')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:48:51 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:51:13 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:52:25 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-21 18:55:39 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')

@@ -1,0 +1,45 @@
+CRITICAL - 2023-07-05 03:09:46 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_1.JPG): No such file or directory
+in APPPATH\Controllers\Peta.php on line 116.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_1.JPG): No such file or directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 116, [...])
+ 2 APPPATH\Controllers\Peta.php(116): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_1.JPG')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('3875')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-07-05 03:09:56 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_1.JPG): No such file or directory
+in APPPATH\Controllers\Peta.php on line 116.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_1.JPG): No such file or directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 116, [...])
+ 2 APPPATH\Controllers\Peta.php(116): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/000_1979_KAPLING_PEKARANGAN_LAHAN_TRANS_BATU_TUNGKU_1.JPG')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('3875')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-07-05 03:51:32 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.jpg): No such file or directory
+in APPPATH\Controllers\Peta.php on line 116.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.jpg): No such file or directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 116, [...])
+ 2 APPPATH\Controllers\Peta.php(116): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('707')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-07-05 04:40:41 --> unlink(C:\xampp\htdocs\sp-tala\public\storage/file_scan/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.jpg): No such file or directory
+in APPPATH\Controllers\Peta.php on line 116.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.jpg): No such file or directory', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 116, [...])
+ 2 APPPATH\Controllers\Peta.php(116): unlink('C:\\xampp\\htdocs\\sp-tala\\public\\storage/file_scan/00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->delete_image('707')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-07-05 04:42:34 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Peta.php(209): CodeIgniter\HTTP\Files\UploadedFile->move('C:\\xampp\\htdocs\\sp-tala\\writable\\storage/file_scan/', '00-C_1980_AREAL_PT_JAKA_MANDIRI_644,5_HA_TAMBANG_ULANG_UJUNG_BATU_BATI-BATI_PELAIHARI.')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_image('707')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')

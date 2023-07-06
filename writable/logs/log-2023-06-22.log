@@ -1,0 +1,187 @@
+CRITICAL - 2023-06-22 02:53:32 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 02:53:49 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 02:55:49 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('491')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 02:55:55 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('492')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 02:56:25 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 02:57:43 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 02:58:07 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 02:58:15 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 02:59:48 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 03:00:47 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 03:03:03 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 03:05:58 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 03:08:31 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('download', '491')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 03:09:25 --> File not found: "storage/file_scan000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG"
+in SYSTEMPATH\Files\File.php on line 47.
+ 1 SYSTEMPATH\Files\File.php(47): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('storage/file_scan000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG')
+ 2 SYSTEMPATH\HTTP\DownloadResponse.php(97): CodeIgniter\Files\File->__construct('storage/file_scan000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG', true)
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(804): CodeIgniter\HTTP\DownloadResponse->setFilePath('storage/file_scan000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG')
+ 4 APPPATH\Controllers\Peta.php(137): CodeIgniter\HTTP\Response->download('file_scan000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG', null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->do_download('491')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+CRITICAL - 2023-06-22 05:42:02 --> Trying to get property 'file_scan' of non-object
+in APPPATH\Controllers\Peta.php on line 36.
+ 1 APPPATH\Controllers\Peta.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'file_scan\' of non-object', 'C:\\xampp\\htdocs\\sp-tala\\app\\Controllers\\Peta.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->show('digitasi')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+ERROR - 2023-06-22 06:13:56 --> mysqli_sql_exception: Unknown column 'nama_file' in 'field list' in C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sp-tala\app\Controllers\Peta.php(198): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Peta->upload_digitasi('491')
+#10 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+#11 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sp-tala\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-06-22 06:13:56 --> Unknown column 'nama_file' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_digitasi` (`fk_peta`, `nama_file`, `status`) VALUES (\'\', \'000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG\', \'Belum Tedudukan\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_digitasi` (`fk_peta`, `nama_file`, `status`) VALUES (\'\', \'000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG\', \'Belum Tedudukan\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_digitasi` (`fk_peta`, `nama_file`, `status`) VALUES (\'\', \'000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG\', \'Belum Tedudukan\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_digitasi` (`fk_peta`, `nama_file`, `status`) VALUES (:fk_peta:, :nama_file:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Peta.php(198): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_digitasi('491')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
+ERROR - 2023-06-22 06:14:47 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_spp`.`tb_digitasi`, CONSTRAINT `tb_digitasi_ibfk_1` FOREIGN KEY (`fk_peta`) REFERENCES `tb_peta_scan` (`id_peta`) ON DELETE SET NULL ON UPDATE CASCADE) in C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sp-tala\app\Controllers\Peta.php(198): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Peta->upload_digitasi('491')
+#10 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+#11 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sp-tala\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sp-tala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-06-22 06:14:47 --> Cannot add or update a child row: a foreign key constraint fails (`db_spp`.`tb_digitasi`, CONSTRAINT `tb_digitasi_ibfk_1` FOREIGN KEY (`fk_peta`) REFERENCES `tb_peta_scan` (`id_peta`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_digitasi` (`fk_peta`, `nama_file_digitasi`, `status`) VALUES (\'\', \'000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG\', \'Belum Tedudukan\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_digitasi` (`fk_peta`, `nama_file_digitasi`, `status`) VALUES (\'\', \'000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG\', \'Belum Tedudukan\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_digitasi` (`fk_peta`, `nama_file_digitasi`, `status`) VALUES (\'\', \'000_000_TRANSMIGRASI_UPT_KAYU_HABANG_50.1.136.13.15.JPG\', \'Belum Tedudukan\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_digitasi` (`fk_peta`, `nama_file_digitasi`, `status`) VALUES (:fk_peta:, :nama_file_digitasi:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Peta.php(198): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Peta->upload_digitasi('491')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peta))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sp-tala\\public\\index.php')
