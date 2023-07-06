@@ -42,4 +42,9 @@ class FileDigitasiModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function get_all_digitasi()
+    {
+        # code...
+    }
 }

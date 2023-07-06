@@ -177,7 +177,7 @@ class Peta extends ResourceController
         $file = $this->PetaModel->get_peta($id);
 
         $fileName = $file->nama_file_digitasi;
-        return $this->response->download('storage/file_digitasi/' . $fileName, null);
+        return $this->response->download(WRITEPATH . 'storage/file_digitasi/' . $fileName, null);
     }
 
     public function image_preview($id)
@@ -198,8 +198,6 @@ class Peta extends ResourceController
 
     public function upload_image($id = null)
     {
-        // $this->PetaModel->db->transStart();
-
         $file = $this->request->getFile('file_scan');
         $fileName = $this->request->getPost('nama_file');
         $extention = $file->getExtension();
@@ -222,8 +220,6 @@ class Peta extends ResourceController
                 'data'       => $this->PetaModel->get_peta($id)
             ]);
         }
-
-        // $this->PetaModel->db->transComplete();
     }
 
     public function upload_digitasi($id = null)
@@ -241,7 +237,7 @@ class Peta extends ResourceController
         if (!$save) {
             return $this->fail($this->FileDigitasiModel->errors(), 400);
         } else {
-            $file->move(FCPATH . 'storage\file_digitasi', $fileName . '.' . $extention);
+            $file->move(WRITEPATH . 'storage\file_digitasi', $fileName . '.' . $extention);
             return $this->respond([
                 'statusCode' => 200,
                 'message'    => 'OK',

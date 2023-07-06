@@ -33,4 +33,17 @@ class Dashboard extends ResourceController
         ];
         return view('Dashboard/index', $data);
     }
+
+    public function dataDigitasi()
+    {
+        $data = [
+            'data' => $this->FileDigitasiModel->findAll()
+        ];
+
+        if ($data) {
+            return $this->respond($data, 200);
+        } else {
+            return $this->fail($this->PetaModel->errors(), 400);
+        }
+    }
 }

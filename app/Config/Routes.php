@@ -34,6 +34,7 @@ $routes->get('/', 'Dashboard::index');
 
 $routes->presenter('dashboard', ['controller' => 'Dashboard']);
 $routes->presenter('penyimpanan-peta', ['controller' => 'Peta']);
+$routes->presenter('digitasi', ['controller' => 'Digitasi']);
 
 $routes->resource('api-peta', ['placeholder' => '(:num)']);
 $routes->get('api-peta/(:num)/detil', 'Peta::detilPeta/$1');
