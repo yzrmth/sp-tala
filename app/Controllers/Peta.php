@@ -166,7 +166,7 @@ class Peta extends ResourceController
         $file = $this->PetaModel->get_peta($id);
 
         $fileName = $file->nama_file;
-        return $this->response->download(WRITEPATH . 'storage/file_scan/' . $fileName, null);
+        return $this->response->download(WRITEPATH . 'storage/original_file/' . $fileName, null);
     }
 
     public function do_download_digitasi($id = null)
