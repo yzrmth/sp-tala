@@ -104,13 +104,14 @@ class Peta extends ResourceController
 
     public function delete_image($id = null)
     {
-        // emngambil semua data yang dijoin
+        // mengambil semua data yang dijoin
         $data = $this->PetaModel->get_peta($id);
         // mengambil data id_scan dari hasil join 
         $id_scan = $data->id_scan;
         $fileName = $data->nama_file;
 
         unlink(WRITEPATH . 'storage/file_scan/' . $fileName);
+        unlink(WRITEPATH . 'storage/original_file/' . $fileName);
         $delete = $this->FileScanModel->delete($id_scan);
         if (!$delete) {
             return $this->fail($this->FileScanModel->errors(), 400);
@@ -183,8 +184,6 @@ class Peta extends ResourceController
         $fileName = $id_peta->file_scan;
 
         $file = base_url('storage/file_scan/' . $fileName);
-
-        dd(file_exists('storage/file_scan/' . $fileName));
 
         if (file_exists($file)) {
             return $file;

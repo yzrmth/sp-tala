@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Edit Deskripsi Peta</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                <h5 class="modal-title">Upload Scan Peta</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
             </div>
             <div class="modal-body">
                 <form action="" id="form-upload-file-scan" enctype="multipart/form-data">

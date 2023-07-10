@@ -6,10 +6,7 @@
 </div>
 
 <div class="section-body">
-    <h2 class="section-title">This is Example Page</h2>
-    <p class="section-lead">This page is just an example for you to create your own page.</p>
     <div class="card">
-
         <div class="card-body">
             <div class="table-responsive">
                 <div id="table-1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">

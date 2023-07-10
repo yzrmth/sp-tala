@@ -96,13 +96,18 @@
 
 <script>
     var id = $('#id_peta').val();
-    console.log(id)
     $(document).ready(function() {
         $.ajax({
             type: "get",
             url: "<?= site_url('api-peta/') ?>" + id + "/detil",
             data: '',
             dataType: "json",
+            // beforeSend: function() {
+            //     $('.loader').css('display', 'block')
+            // },
+            complete: function() {
+                $('#loader').css('display', 'none')
+            },
             success: function(response) {
                 $('#proyek').val(response.data.proyek);
                 $('#nomor_peta').val(response.data.nomor_peta);
@@ -195,6 +200,12 @@
                         contentType: false,
                         cache: false,
                         dataType: "json",
+                        beforeSend: function() {
+                            document.querySelector('.loading').style.display = 'block';
+                        },
+                        complete: function() {
+                            document.querySelector('.loading').style.display = 'none';
+                        },
                         success: function(response) {
                             swal('Berhasil', 'Data berhasil disimpan.', 'success')
                                 .then(() => {

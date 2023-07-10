@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Layout &rsaquo; Default &mdash; Stisla</title>
+  <title>Sistem Informasi SP Tala</title>
+  <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/logo_atrbpn.png') ?>">
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="<?= base_url('templates/node_modules/bootstrap/dist/css/bootstrap.min.css') ?>">
@@ -20,6 +21,7 @@
   <link rel="stylesheet" href="<?= base_url('templates/node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css') ?>">
 
   <!-- Page Specific CSS File -->
+  <link rel="stylesheet" href="<?= base_url('assets/custom_css/loading_page.css') ?>">
   <?= $this->renderSection('page-css') ?>
 
   <!-- Template CSS -->
@@ -40,8 +42,14 @@
   <!-- /END GA -->
 </head>
 
-<body>
-  <div id="app">
+<body onload="hide_loading()">
+  <div class="loading overlay">
+    <div class="lds-ripple">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div id=" app">
     <div class="main-wrapper main-wrapper-1">
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg main-navbar">
@@ -51,8 +59,6 @@
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
           <div class="search-element">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
-            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
             <div class="search-backdrop"></div>
             <div class="search-result">
               <div class="search-header">
@@ -266,7 +272,7 @@
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
 
-            <a href=""><img alt="image" class="mr-3 rounded-circle" width="100" src="<?= base_url('assets/img/logo_atrbpn.png') ?>">
+            <a href="<?= site_url() ?>"><img alt="image" class="mr-3 mt-4 " width="100" src="<?= base_url('assets/img/logo_atrbpn.png') ?>">
               <h6 class="mt-3">Kantor Pertanahan Kabupaten Tanah Laut</h6>
             </a>
           </div>
@@ -300,6 +306,14 @@
   <!-- <?= $this->renderSection('modal') ?> -->
 
   <!-- General JS Scripts -->
+  <script>
+    let fadeTarget = document.querySelector('.loading')
+
+    function hide_loading() {
+      fadeTarget.style.display = 'none';
+    }
+  </script>
+
   <script src="<?= base_url('templates/node_modules/jquery/dist/jquery.min.js') ?>"></script>
   <script src="<?= base_url('templates/node_modules/popper.js/dist/umd/popper.min.js') ?>"></script>
   <script src="<?= base_url('templates') ?>/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
