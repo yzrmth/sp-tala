@@ -24,7 +24,7 @@
                                 <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#pilih-pasien">Aw, yeah!</button> -->
                                 <a href="" data-toggle="modal" data-target="#modal-edit-peta" class="dropdown-item has-icon"><i class="far fa-edit"></i> Edit</a>
                                 <div class="dropdown-divider"></div>
-                                <a onclick="hapus()" class="dropdown-item has-icon text-danger btn-hapus"><i class="far fa-trash-alt"></i> Delete</a>
+                                <!-- <a onclick="hapus()" class="dropdown-item has-icon text-danger btn-hapus"><i class="far fa-trash-alt"></i> Delete</a> -->
                             </div>
                         </div>
                     </div>
