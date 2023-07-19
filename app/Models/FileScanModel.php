@@ -42,10 +42,10 @@ class FileScanModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function get_all_file_scan()
+    public function get_all_uploaded()
     {
-        return $this->db->table('tb_digitasi')
-            ->join('tb_peta_scan', 'tb_digitasi.fk_peta=tb_peta_scan.id_peta', 'left')
+        return $this->db->table('tb_image_scan')
+            ->join('tb_peta_scan', 'tb_image_scan.fk_peta=tb_peta_scan.id_peta', 'left')
             ->get()->getResult();
     }
 }

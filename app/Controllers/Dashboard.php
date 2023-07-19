@@ -34,6 +34,14 @@ class Dashboard extends ResourceController
         return view('Dashboard/index', $data);
     }
 
+    public function scan_peta_dashboard()
+    {
+        $data = [
+            'title' => 'UPLOAD SCAN PETA'
+        ];
+        return view('ScanPeta/index', $data);
+    }
+
     public function dataDigitasi()
     {
         $data = [
@@ -43,7 +51,20 @@ class Dashboard extends ResourceController
         if ($data) {
             return $this->respond($data, 200);
         } else {
-            return $this->fail($this->PetaModel->errors(), 400);
+            return $this->fail($this->FileDigitasiModel->errors(), 400);
+        }
+    }
+
+    public function dataScanPeta()
+    {
+        $data = [
+            'data' => $this->FileScanModel->get_all_uploaded()
+        ];
+
+        if ($data) {
+            return $this->respond($data, 200);
+        } else {
+            return $this->fail($this->FileScanModel->errors(), 400);
         }
     }
 }

@@ -48,7 +48,9 @@ $routes->get('jenis-dokumen', 'Dokumen::jenis_dokumen');
 // Routes Digitasi
 $routes->get('api-digitasi', 'Digitasi::index');
 
-
+// Routes Scan Peta (image)
+$routes->get('scan-uploaded', 'Dashboard::scan_peta_dashboard');
+$routes->get('api-scan-uploaded', 'Dashboard::dataScanPeta');
 
 // custom routes penyimpanan peta
 $routes->get('data-peta', 'Peta::dataPeta');
@@ -62,8 +64,6 @@ $routes->post('penyimpanan-peta/upload-digitasi/(:num)', 'Peta::upload_digitasi/
 $routes->presenter('dokumen', ['controller' => 'dokumen']);
 $routes->post('dokumen/add', 'Dokumen::add_dokumen');
 $routes->post('jenis-dokumen/add', 'Dokumen::add_jenis_dokumen');
-
-
 
 
 // Route untuk merender gambar Peta
