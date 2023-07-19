@@ -1,7 +1,7 @@
 <?= $this->extend('_layouts/indexLayout') ?>
 
 <?= $this->section('page-css') ?>
-<link rel="stylesheet" href="<?= base_url('templates/node_modules/sweetalert2/dist/sweetalert2.min.css') ?>">
+
 <link rel="stylesheet" href="<?= base_url('assets/simple-lightbox/simple-lightbox.css') ?>">
 <?= $this->endSection() ?>
 
@@ -60,7 +60,7 @@
                                 <div class="dropdown-divider"></div>
                             </div>
                         </div>
-                        <a href="" data-toggle="modal" data-target="#modal-upload-file-digitasi" class="btn btn-primary btn-icon btn-upload-digitasi" hidden>Upload Digitasi</i></a>
+                        <a href="" data-toggle="modal" data-target="#modal-upload-file-digitasi" class="    " hidden>Upload Digitasi</i></a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -91,8 +91,7 @@
 <?= $this->section('page-script') ?>
 <!-- simple lightbos library -->
 <script src="<?= base_url('assets/simple-lightbox/simple-lightbox.js') ?>"></script>
-<!-- sweetalert -->
-<script src="<?= base_url('templates/node_modules/sweetalert/dist/sweetalert.min.js') ?>"></script>
+
 
 <script>
     var id = $('#id_peta').val();
@@ -214,7 +213,7 @@
                                 });
                         },
                         error: function(response) {
-                            console.log(response)
+                            console.log('gagal')
                         }
                     });
                 } else {

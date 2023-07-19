@@ -20,7 +20,10 @@
   <link rel="stylesheet" href="<?= base_url('templates/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') ?>">
   <link rel="stylesheet" href="<?= base_url('templates/node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css') ?>">
 
+  <!-- CSS SweetAlert 2 -->
+  <link rel="stylesheet" href="<?= base_url('templates/node_modules/sweetalert2/dist/sweetalert2.min.css') ?>">
   <!-- Page Specific CSS File -->
+
   <link rel="stylesheet" href="<?= base_url('assets/custom_css/loading_page.css') ?>">
   <?= $this->renderSection('page-css') ?>
 
@@ -45,6 +48,11 @@
 <body onload="hide_loading()">
   <div class="loading overlay">
     <div class="lds-ripple">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="lds-facebook">
+      <div></div>
       <div></div>
       <div></div>
     </div>
@@ -330,6 +338,8 @@
 
   <!-- Page Specific JS File -->
   <script src="<?= base_url('templates/assets/js/page/bootstrap-modal.js') ?>"></script>
+  <!-- sweetalert -->
+  <script src="<?= base_url('templates/node_modules/sweetalert/dist/sweetalert.min.js') ?>"></script>
 
   <!-- Template JS File -->
   <script src="<?= base_url('templates/assets') ?>/js/scripts.js"></script>

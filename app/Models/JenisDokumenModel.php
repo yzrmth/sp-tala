@@ -4,19 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class FileDigitasiModel extends Model
+class JenisDokumenModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tb_digitasi';
-    protected $primaryKey       = 'id_digitasi';
+    protected $table            = 'tb_jenis_dokumen';
+    protected $primaryKey       = 'id_jenis_dokumen';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'object';
-    protected $useSoftDeletes   = false;
+    protected $returnType       = 'App\Entities\JenisDokumenEntity';
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'fk_peta',
-        'nama_file_digitasi',
-        'status'
+        'jenis_dokumen',
+        'keterangan'
     ];
 
     // Dates
@@ -43,10 +42,9 @@ class FileDigitasiModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function get_all_digitasi()
+    public function get_all_jenis_dokumen()
     {
-        return $this->db->table('tb_digitasi')
-            ->join('tb_peta_scan', 'tb_digitasi.fk_peta=tb_peta_scan.id_peta', 'left')
+        return $this->db->table('tb_jenis_dokumen')
             ->get()->getResult();
     }
 }

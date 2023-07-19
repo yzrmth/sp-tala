@@ -13,7 +13,7 @@
             <li><a class="nav-link" href="<?= site_url('penyimpanan-peta') ?>">Peta</a></li>
         </ul>
         <ul class="dropdown-menu">
-            <li><a class="nav-link" href="<?= site_url('penyimpanan-peta') ?>">Dokumen</a></li>
+            <li><a class="nav-link" href="<?= site_url('dokumen') ?>">Dokumen</a></li>
         </ul>
     <li class="menu-header">Master Data</li>
 

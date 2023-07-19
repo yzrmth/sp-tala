@@ -62,4 +62,26 @@ class PetaModel extends Model
             ->join('tb_digitasi', 'tb_peta_scan.id_peta=tb_digitasi.fk_peta', 'left')
             ->get()->getResult();
     }
+
+    public function upload_peta($data_scan, $data_peta)
+    {
+        $ScanModel = $this->db->table('tb_image_scan');
+
+        $this->db->transBegin();
+        // insert data te tabel tb_peta_scan
+        $this->save($data_peta);
+
+        // insert data ke table scan peta
+        $ScanModel->insert($data_scan);
+
+
+        $this->db->transCommit();
+        if ($this->db->transStatus() === false) {
+            $this->db->transRollback();
+            return false;
+        } else {
+            $this->db->transCommit();
+            return true;
+        }
+    }
 }

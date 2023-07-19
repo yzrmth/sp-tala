@@ -4,19 +4,20 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class FileDigitasiModel extends Model
+class DokumenModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'tb_digitasi';
-    protected $primaryKey       = 'id_digitasi';
+    protected $table            = 'tb_dokumen';
+    protected $primaryKey       = 'id_dokumen';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'object';
-    protected $useSoftDeletes   = false;
+    protected $returnType       = 'App\Entities\DokumenEntity';
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'fk_peta',
-        'nama_file_digitasi',
-        'status'
+        'fk_jenis_dokumen',
+        'nama_dokumen',
+        'keterangan',
+        'file_dokumen'
     ];
 
     // Dates
@@ -43,10 +44,19 @@ class FileDigitasiModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    public function get_all_digitasi()
+    public function get_all_dokumen()
     {
-        return $this->db->table('tb_digitasi')
-            ->join('tb_peta_scan', 'tb_digitasi.fk_peta=tb_peta_scan.id_peta', 'left')
+        return $this->db->table('tb_dokumen')
+            ->where('tb_dokumen.deleted_at',)
+            ->join('tb_jenis_dokumen', 'tb_dokumen.fk_jenis_dokumen=tb_jenis_dokumen.id_jenis_dokumen', 'left')
             ->get()->getResult();
+    }
+
+    public function get_dokumen($id = null)
+    {
+        return $this->db->table('tb_dokumen')
+            ->where('id_dokumen', $id)
+            ->join('tb_jenis_dokumen', 'tb_dokumen.fk_jenis_dokumen=tb_jenis_dokumen.id_jenis_dokumen', 'left')
+            ->get()->getRow();
     }
 }

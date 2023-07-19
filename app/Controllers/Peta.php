@@ -34,7 +34,7 @@ class Peta extends ResourceController
     public function index()
     {
         $data = [
-            'title' => 'Manajemen Peyimpanan Peta'
+            'title' => 'MANAJEMEN DIGITALISASI PETA'
         ];
         return view('Peta/index', $data);
     }
@@ -192,6 +192,7 @@ class Peta extends ResourceController
         }
     }
 
+    /*
     public function upload_image($id = null)
     {
         $file = $this->request->getFile('file_scan');
@@ -221,6 +222,49 @@ class Peta extends ResourceController
                 'statusCode' => 200,
                 'message'    => 'OK',
                 'data'       => $this->PetaModel->get_peta($id)
+            ]);
+        }
+    }
+    */
+
+    public function upload_image($id = null)
+    {
+        $file = $this->request->getFile('file_scan');
+        $fileName = $this->request->getPost('nama_file');
+        $extention = $file->getExtension();
+
+        $_fileName_ = $fileName . '.' . $extention;
+
+        $this->PetaEntity->id_peta = $this->request->getPost('id_peta');
+        $this->PetaEntity->proyek = $this->request->getPost('proyek');
+        $this->PetaEntity->nomor_peta = $this->request->getPost('nomor_peta');
+        $this->PetaEntity->tahun = $this->request->getPost('tahun');
+        $this->PetaEntity->kecamatan = $this->request->getPost('kecamatan');
+        $this->PetaEntity->desa = $this->request->getPost('desa');
+
+        // data untuk insert ke tabel tb_image_scan
+        $data_scan = [
+            'fk_peta' => $this->request->getPost('id_peta'),
+            'nama_file' => $_fileName_
+        ];
+
+        $result = $this->PetaModel->upload_peta($data_scan, $this->PetaEntity);
+
+        if ($result === false) {
+            return $this->fail($this->FileScanModel->errors(), 400);
+        } else {
+            // resize gambar
+            $image = \Config\Services::image()
+                ->withFile($file)
+                ->resize(1500, 1500, true, 'height')
+                ->save(WRITEPATH . 'storage/file_scan/' . $_fileName_);
+
+            // memindahkan file original ke folder original
+            $file->move(WRITEPATH . 'storage/original_file/', $_fileName_);
+            return $this->respond([
+                'statusCode' => 200,
+                'message'    => 'OK',
+                'data'       => $result
             ]);
         }
     }

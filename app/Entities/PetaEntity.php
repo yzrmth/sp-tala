@@ -27,4 +27,10 @@ class PetaEntity extends Entity
         $this->attributes['desa'] = ucwords($desa);
         return $this;
     }
+
+    public function setFileName($file_scan)
+    {
+        $this->attributes['file_scan'] = $file_scan;
+        return $this;
+    }
 }

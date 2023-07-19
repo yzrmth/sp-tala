@@ -18,7 +18,7 @@ class Digitasi extends ResourceController
     public function index()
     {
         $data = [
-            'data' => $this->FileDigitasiModel->findAll()
+            'data' => $this->FileDigitasiModel->get_all_digitasi()
         ];
 
         if ($data) {
@@ -30,6 +30,9 @@ class Digitasi extends ResourceController
 
     public function show($id = null)
     {
-        # code...
+        $data = [
+            'title' => 'DIGITASI PETA'
+        ];
+        return view('Digitasi/index', $data);
     }
 }

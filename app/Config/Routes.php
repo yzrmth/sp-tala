@@ -40,7 +40,17 @@ $routes->resource('api-peta', ['placeholder' => '(:num)']);
 $routes->get('api-peta/(:num)/detil', 'Peta::detilPeta/$1');
 $routes->get('api-peta/(:num)/peta-image', 'Peta::image_preview/$1');
 
-// custom routes
+// API dokumen controller
+$routes->get('data-dokumen', 'Dokumen::dataDokumen');
+$routes->get('dokumen/(:num)/detil', 'Dokumen::get_dokumen/$1');
+$routes->get('jenis-dokumen', 'Dokumen::jenis_dokumen');
+
+// Routes Digitasi
+$routes->get('api-digitasi', 'Digitasi::index');
+
+
+
+// custom routes penyimpanan peta
 $routes->get('data-peta', 'Peta::dataPeta');
 $routes->get('data-peta/download/(:num)', 'Peta::do_download/$1');
 $routes->get('data-peta/download-digitasi/(:num)', 'Peta::do_download_digitasi/$1');
@@ -48,8 +58,17 @@ $routes->post('data-peta/image-delete/(:num)', 'Peta::delete_image/$1');
 $routes->post('penyimpanan-peta/upload/(:num)', 'Peta::upload_image/$1');
 $routes->post('penyimpanan-peta/upload-digitasi/(:num)', 'Peta::upload_digitasi/$1');
 
+//  custome routes dokumen
+$routes->presenter('dokumen', ['controller' => 'dokumen']);
+$routes->post('dokumen/add', 'Dokumen::add_dokumen');
+$routes->post('jenis-dokumen/add', 'Dokumen::add_jenis_dokumen');
+
+
+
+
 // Route untuk merender gambar Peta
 $routes->match(['get', 'post'], 'imageRender/(:segment)', 'Peta::renderImage/$1');
+$routes->match(['get', 'post'], 'pdfRender/(:segment)', 'Dokumen::render_pdf/$1');
 
 
 /*
