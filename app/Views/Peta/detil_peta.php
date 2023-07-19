@@ -60,7 +60,7 @@
                                 <div class="dropdown-divider"></div>
                             </div>
                         </div>
-                        <a href="" data-toggle="modal" data-target="#modal-upload-file-digitasi" class="    " hidden>Upload Digitasi</i></a>
+                        <a href="" data-toggle="modal" data-target="#modal-upload-file-digitasi" class="btn btn-primary btn-icon btn-upload-digitasi" hidden>Upload Digitasi</i></a>
                     </div>
                 </div>
                 <div class="card-body">

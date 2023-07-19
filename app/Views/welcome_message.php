@@ -10,7 +10,7 @@
         <div class="col-12 mb-4">
             <div class="hero bg-primary text-white">
                 <div class="hero-inner">
-                    <h2>ada kata kata keren gasan ini lah</h2>
+                    <h2>welcoming message</h2>
                     <p class="lead">.</p>
                 </div>
             </div>

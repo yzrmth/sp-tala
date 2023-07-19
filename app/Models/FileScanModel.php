@@ -44,9 +44,8 @@ class FileScanModel extends Model
 
     public function get_all_file_scan()
     {
-        return $this->db->table('tb_peta_scan')
-            ->join('tb_image_scan', 'tb_peta_scan.id_peta=tb_image_scan.fk_peta', 'left')
-            ->join('tb_digitasi', 'tb_peta_scan.id_peta=tb_digitasi.fk_peta', 'left')
+        return $this->db->table('tb_digitasi')
+            ->join('tb_peta_scan', 'tb_digitasi.fk_peta=tb_peta_scan.id_peta', 'left')
             ->get()->getResult();
     }
 }
