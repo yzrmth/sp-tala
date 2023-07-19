@@ -126,4 +126,7 @@ nb-configuration.xml
 /.phpunit.*.cache
 
 # Storage
-storage/
+dokumen
+file_digitasi
+file_scan
+original_file
