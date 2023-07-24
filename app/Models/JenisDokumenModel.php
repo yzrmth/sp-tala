@@ -15,7 +15,7 @@ class JenisDokumenModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'jenis_dokumen',
-        'keterangan'
+        'deskripsi'
     ];
 
     // Dates

@@ -70,18 +70,6 @@ class Dokumen extends ResourceController
         }
     }
 
-    public function render_pdf($filename)
-    {
-        $filepath = WRITEPATH . 'storage/dokumen/' . $filename;
-
-        $mime = mime_content_type($filepath);
-        header('Content-Length: ' . filesize($filepath));
-        header("Content-Type: $mime");
-        header('Content-Disposition: inline; filename="' . $filepath . '";');
-        readfile($filepath);
-        exit();
-    }
-
     public function show($id = null)
     {
         $id_dokumen = $this->DokumenModel->get_dokumen($id);
@@ -121,6 +109,67 @@ class Dokumen extends ResourceController
 
     public function update($id = null)
     {
+        // MENGAMBIL NILAI INPUT DARI FORM
+        $this->DokumenEntity->fk_jenis_dokumen = $this->request->getPost('fk_jenis_dokumen');
+        $this->DokumenEntity->nama_dokumen = $this->request->getPost('nama_dokumen');
+        $this->DokumenEntity->keterangan = $this->request->getPost('keterangan');
+        $file = $this->request->getFile('file_dokumen');
+
+        $FileNameLama = $this->request->getPost('nama_file_lama');
+
+        // CEK APAKAH USER ADA MENGUPLOAD FILE BARU
+        if ($file->getError() == 4) {
+            $FileName = $this->request->getPost('nama_file_lama');
+
+            // JIKA ADA FILE BARU YANG DI UPLOAD
+        } else {
+            // NAMA FILE DOKUMEN
+            $this->DokumenEntity->file_dokumen = $this->request->getPost('nama_dokumen');
+            $extention = $file->getExtension();
+            $FileName = $this->DokumenEntity->file_dokumen  . '.' . $extention;
+
+            unlink(WRITEPATH . 'storage/dokumen/' . $FileNameLama);
+            // MEMINDAHKAN FILE KE STORAGE/DOKUMEN
+            $file->move(WRITEPATH . 'storage/dokumen/', $FileName);
+        }
+        $data = [
+            'id_dokumen' => $id,
+            'fk_jenis_dokumen' => $this->DokumenEntity->fk_jenis_dokumen,
+            'nama_dokumen' => $this->DokumenEntity->nama_dokumen,
+            'keterangan' =>  $this->DokumenEntity->keterangan,
+            'file_dokumen' => $FileName
+        ];
+
+        $save = $this->DokumenModel->save($data);
+
+        if (!$save) {
+            return $this->fail($this->DokumenModel->errors(), 400);
+        } else {
+            return $this->respond([
+
+                'statusCode' => 200,
+                'message'    => 'OK',
+                'data'       => $data
+            ]);
+        }
+    }
+
+    /*
+ * --------------------------------------------------------------------
+ * API Routes for Dokumen
+ * --------------------------------------------------------------------
+ */
+
+    public function render_pdf($filename)
+    {
+        $filepath = WRITEPATH . 'storage/dokumen/' . $filename;
+
+        $mime = mime_content_type($filepath);
+        header('Content-Length: ' . filesize($filepath));
+        header("Content-Type: $mime");
+        header('Content-Disposition: inline; filename="' . $filepath . '";');
+        readfile($filepath);
+        exit();
     }
 
     public function dataDokumen()

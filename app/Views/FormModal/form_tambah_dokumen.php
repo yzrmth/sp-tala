@@ -7,7 +7,8 @@
             <div class="modal-body">
                 <form action="" id="form-tambah-dokumen" enctype="multipart/form-data">
                     <?= csrf_field() ?>
-                    <input type="text" class="form-control" id="id_dokumen" name="id_dokumen" value="">
+                    <input type="hidden" class="form-control" id="id_dokumen" name="id_dokumen" value="">
+                    <input type="text" class="form-control" id="nama_file_lama" name="nama_file_lama" value="">
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label" for="JenisDokumen">Jenis Dokumen</label>
                         <div class="col-sm-6">
@@ -24,7 +25,7 @@
                     </div>
                     <div class=" form-group ">
                         <label for=" keterangan">Keterangan</label>
-                        <textarea class="form-control" name="keterangan" id="keterangan" cols="100" rows="100"></textarea>
+                        <textarea class="form-control" name="keterangan" id="keterangan" cols="1000" rows="1000"></textarea>
                         <div class="invalid-feedback error-keterangan"></div>
                     </div>
                     <div class="form-group ">

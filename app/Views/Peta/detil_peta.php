@@ -41,6 +41,10 @@
                         <dd class="col-sm-8"><?= $peta->kecamatan ?></dd>
                         <dt class="col-sm-4">Desa</dt>
                         <dd class="col-sm-8"><?= $peta->desa ?></dd>
+                        <dt class="col-sm-4">Status Digitasi</dt>
+                        <dd class="col-sm-8 status">
+
+                        </dd>
                     </dl>
                 </div>
             </div>
@@ -126,6 +130,13 @@
                     $('.btn-hapus-scan').prop('hidden', false)
                     $('.download-menu').prop('hidden', false)
                     $('.btn-upload-digitasi').prop('hidden', true)
+                    if (response.data.status === 'Belum Tedudukan') {
+                        $('.status').prop('hidden', false)
+                        $('.status').html(' <div class="badge badge-warning">Belum Terdudukan</div>')
+                    } else {
+                        $('.status').prop('hidden', false)
+                        $('.status').html(' <div class="badge badge-success">Sudah Terdudukan</div>')
+                    }
                 } else {
                     $('.btn-tambah-file-scan').prop('hidden', false)
                 }
@@ -243,6 +254,12 @@
                         contentType: false,
                         cache: false,
                         dataType: "json",
+                        beforeSend: function() {
+                            document.querySelector('.loading').style.display = 'block';
+                        },
+                        complete: function() {
+                            document.querySelector('.loading').style.display = 'none';
+                        },
                         success: function(response) {
                             swal('Berhasil', 'Data berhasil disimpan.', 'success')
                                 .then(() => {
@@ -276,6 +293,12 @@
                         type: "post",
                         url: "<?= site_url('penyimpanan-peta/delete/') ?>" + id,
                         dataType: "json",
+                        beforeSend: function() {
+                            document.querySelector('.loading').style.display = 'block';
+                        },
+                        complete: function() {
+                            document.querySelector('.loading').style.display = 'none';
+                        },
                         success: function(response) {
                             swal('Berhasil', 'Data berhasil dihapus.', 'success')
                                 .then(() => {

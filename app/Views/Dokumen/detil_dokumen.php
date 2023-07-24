@@ -38,8 +38,10 @@
             <div class="card card-secondary">
                 <div class="card-body">
                     <div>
+                        <div class="text-center mb-2">
+                            <a href="<?= site_url('pdfRender/' . $filepath) ?>" target="_blank" class=" btn btn-primary">Lihat Dokumen</a>
+                        </div>
                         <div class="embed-responsive embed-responsive-16by9">
-
                             <embed class="embed-responsive-item" type="application/pdf" src="/pdfRender/<?= $filepath ?>" allowfullscreen></embed>
                         </div>
                     </div>
@@ -119,6 +121,12 @@
             url: "<?= site_url('dokumen/' . $data->id_dokumen . '/detil') ?>",
             // data: "data",
             dataType: "json",
+            beforeSend: function() {
+                document.querySelector('.loading').style.display = 'block';
+            },
+            complete: function() {
+                document.querySelector('.loading').style.display = 'none';
+            },
             success: function(response) {
                 // MEMBUKA MODAL FORM TAMBAH/EDIT DOKUMEN
                 $("#modal-tambah-dokumen").modal('show');
@@ -131,7 +139,7 @@
                 $('#nama_dokumen').val(response.data.nama_dokumen)
                 $('#keterangan').val(response.data.keterangan)
                 $('#JenisDokumen').val(response.data.id_jenis_dokumen)
-                $('#file_dokumen').val('/pdfRender/' + response.data.file_dokumen)
+                $('#nama_file_lama').val(response.data.file_dokumen)
             },
             error: console.error()
         });
@@ -169,7 +177,7 @@
                             swal('Berhasil', 'Data berhasil disimpan.', 'success')
                                 .then(() => {
                                     // refresh halaman
-                                    // location.reload(true);
+                                    location.reload(true);
                                 });
                         },
                         error: function(response) {

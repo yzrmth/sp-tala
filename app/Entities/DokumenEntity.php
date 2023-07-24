@@ -19,8 +19,8 @@ class DokumenEntity extends Entity
 
     public function setKeterangan($keterangan)
     {
-        $cleanInput = trim($keterangan);
-        $this->attributes['keterangan'] = ucwords($cleanInput);
+        // $cleanInput = trim($keterangan);
+        $this->attributes['keterangan'] = ucwords($keterangan);
         return $this;
     }
 

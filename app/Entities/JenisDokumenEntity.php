@@ -16,9 +16,9 @@ class JenisDokumenEntity extends Entity
         return $this;
     }
 
-    public function setKeterangan($keterangan)
+    public function serDeskripsi($deskripsi)
     {
-        $this->attributes['keterangan'] = ucwords($keterangan);
+        $this->attributes['deskripsi'] = ucwords($deskripsi);
         return $this;
     }
 }

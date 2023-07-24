@@ -56,7 +56,7 @@ class DokumenModel extends Model
     {
         return $this->db->table('tb_dokumen')
             ->where('id_dokumen', $id)
-            ->join('tb_jenis_dokumen', 'tb_dokumen.fk_jenis_dokumen=tb_jenis_dokumen.id_jenis_dokumen', 'left')
+            ->join('tb_jenis_dokumen', 'tb_dokumen.fk_jenis_dokumen=tb_jenis_dokumen.id_jenis_dokumen')
             ->get()->getRow();
     }
 }
