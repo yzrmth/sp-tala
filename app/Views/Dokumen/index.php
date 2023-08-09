@@ -180,7 +180,31 @@
                                 });
                         },
                         error: function(response) {
-                            console.log(response)
+                            if (response.responseJSON.messages.fk_jenis_dokumen) {
+                                $('#JenisDokumen').addClass('is-invalid');
+                                $('.error-jenis-dokumen').html(response.responseJSON.messages.fk_jenis_dokumen);
+                            } else {
+                                $('#jenisDokumen').removeClass('is-invalid');
+                            }
+                            if (response.responseJSON.messages.nama_dokumen) {
+                                $('#nama_dokumen').addClass('is-invalid');
+                                $('.error-nama-dokumen').html(response.responseJSON.messages.nama_dokumen);
+                            } else {
+                                $('#nama_dokumen').removeClass('is-invalid');
+                            }
+                            if (response.responseJSON.messages.keterangan) {
+                                $('#keterangan').addClass('is-invalid');
+                                $('.error-keterangan').html(response.responseJSON.messages.keterangan);
+                            } else {
+                                $('#keterangan').removeClass('is-invalid');
+                            }
+                            if (response.responseJSON.messages.file_dokumen) {
+                                $('#file-dokumen').addClass('is-invalid');
+                                $('.error-file-dokumen').html(response.responseJSON.messages.file_dokumen);
+                            } else {
+                                $('#file-dokumen').removeClass('is-invalid');
+                            }
+
                         }
                     });
                 } else {

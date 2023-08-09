@@ -63,9 +63,19 @@ class PetaModel extends Model
             ->get()->getResult();
     }
 
-    public function upload_peta($data_scan, $data_peta)
+    public function get_peta_terdudukan()
+    {
+        return $this->db->table('tb_peta_scan')
+            ->join('tb_image_scan', 'tb_peta_scan.id_peta=tb_image_scan.fk_peta', 'left')
+            ->join('tb_digitasi', 'tb_peta_scan.id_peta=tb_digitasi.fk_peta', 'left')
+            ->where('status', 'Sudah Terdudukan')
+            ->get()->getResult();
+    }
+
+    public function upload_peta($data_scan, $data_peta, $data_riwayat)
     {
         $ScanModel = $this->db->table('tb_image_scan');
+        $RiwayatModel = $this->db->table('tb_riwayat');
 
         $this->db->transBegin();
         // insert data te tabel tb_peta_scan
@@ -73,6 +83,11 @@ class PetaModel extends Model
 
         // insert data ke table scan peta
         $ScanModel->insert($data_scan);
+
+        // insert data ke table scan peta
+        $RiwayatModel->insert($data_riwayat);
+
+
 
 
         $this->db->transCommit();

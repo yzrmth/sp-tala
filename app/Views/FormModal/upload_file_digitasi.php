@@ -9,15 +9,18 @@
                     <?= csrf_field() ?>
                     <input type="hidden" class="form-control" id="id_peta" name="id_peta" value="<?= $peta->id_peta ?>">
                     <input type="hidden" class="form-control" id="nama_file" name="nama_file" value="<?= $peta->file_scan ?>">
+                    <input type="hidden" class="form-control" id="user_id" name="user_id" value="<?= user_id() ?>">
+
                     <div class="form-group">
                         <label>Default Select</label>
                         <select class="form-control" id="status" name="status">
                             <option value="Sudah Terdudukan">Sudah Terdudukan</option>
-                            <option value="Belum Tedudukan">Belum Terdudukan</option>
+                            <option value="Belum Terdudukan">Belum Terdudukan</option>
                         </select>
+                        <div class="invalid-feedback error-status"></div>
                     </div>
                     <div class="form-group ">
-                        <input type="file" class="form-control" id="file_digitasi" name="file_digitasi">
+                        <input type="file" class="form-control" id="file-digitasi" name="file_digitasi">
                         <div class="invalid-feedback error-file-digitasi"></div>
                     </div>
                     <div class="modal-footer bg-whitesmoke br">

@@ -9,33 +9,36 @@
                     <?= csrf_field() ?>
                     <input type="hidden" class="form-control" id="id_peta" name="id_peta" value="<?= $peta->id_peta ?>">
                     <input type="hidden" class="form-control" id="nama_file" name="nama_file" value="<?= $peta->file_scan ?>">
+                    <input type="hidden" class="form-control" id="user_id" name="user_id" value="<?= user_id() ?>">
                     <div class="form-group ">
                         <label for="proyek">Nama Proyek</label>
-                        <input type="text" class="form-control" id="proyek" name="proyek">
+                        <input type="text" class="form-control" id="proyek" name="proyek" value="<?= $peta->proyek ?>">
                         <div class="invalid-feedback error-proyek"></div>
                     </div>
                     <div class="form-group ">
                         <label for="nomor_peta">Nomor Peta</label>
-                        <input type="text" class="form-control" id="nomor_peta" name="nomor_peta">
-                        <div class="invalid-feedback error-nomor-peta"></div>
+                        <input type="text" class="form-control" id="nomor_peta" name="nomor_peta" value="<?= $peta->nomor_peta ?>">
                     </div>
                     <div class="form-group ">
                         <label for="tahun">Tahun</label>
-                        <input type="text" class="form-control" id="tahun" name="tahun">
-                        <div class="invalid-feedback error-tahun"></div>
+                        <input type="text" class="form-control" id="tahun" name="tahun" value="<?= $peta->tahun ?>">
+                        <div class=" invalid-feedback error-tahun">
+                        </div>
                     </div>
                     <div class="form-group ">
                         <label for="kecamatan">Kecamatan</label>
-                        <input type="text" class="form-control" id="kecamatan" name="kecamatan">
-                        <div class="invalid-feedback error-kecamatan"></div>
+                        <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="<?= $peta->kecamatan ?>">
+                        <div class=" invalid-feedback error-kecamatan">
+                        </div>
                     </div>
                     <div class="form-group ">
                         <label for="desa">Desa</label>
-                        <input type="text" class="form-control" id="desa" name="desa">
-                        <div class="invalid-feedback error-desa"></div>
+                        <input type="text" class="form-control" id="desa" name="desa" value="<?= $peta->desa ?>">
+                        <div class=" invalid-feedback error-desa">
+                        </div>
                     </div>
                     <div class="form-group ">
-                        <input type="file" class="form-control" id="file_scan" name="file_scan">
+                        <input type="file" class="form-control " id="file-scan" name="file_scan">
                         <div class="invalid-feedback error-file-scan"></div>
                     </div>
                     <div class="modal-footer bg-whitesmoke br">

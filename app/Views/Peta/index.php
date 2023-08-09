@@ -16,7 +16,9 @@
                                 <thead>
                                     <tr role="row">
                                         <th class="sorting" tabindex="0" aria-controls="table-1" rowspan="1" colspan="1" aria-label="Task Name: activate to sort column ascending" style="width: 100.641px;">Nama File Peta</th>
+                                        <th class="sorting" tabindex="0" aria-controls="table-1" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 100.062px;">Upload Scan Peta</th>
                                         <th class="sorting" tabindex="0" aria-controls="table-1" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 100.062px;">Kecamatan</th>
+                                        <th class="sorting" tabindex="0" aria-controls="table-1" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 100.062px;">Status</th>
                                         <th class="sorting" tabindex="0" aria-controls="table-1" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 66.8906px;"></th>
                                     </tr>
                                 </thead>
@@ -49,12 +51,36 @@
                     data: 'file_scan'
                 },
                 {
+                    data: 'nama_file',
+                    render: function(data, type, row) {
+                        if (data != null) {
+                            return '<i class="fas fa-check"></i>'
+                        } else {
+                            return '<i class="fas fa-times"></i>'
+                        }
+                    }
+
+                },
+                {
                     data: 'kecamatan'
+
+                },
+                {
+                    data: 'status',
+                    render: function(data, type, row) {
+                        if (data == 'Sudah Terdudukan') {
+                            return '<div class="badge badge-pill badge-success m-2 ">' + data + '</div>'
+                        } else if (data == 'Belum Terdudukan') {
+                            return '<div class="badge badge-pill badge-danger m-2 ">' + data + '</div>'
+                        } else {
+                            return '';
+                        }
+                    }
                 },
                 {
                     data: 'id_peta',
                     render: function(data, type, row) {
-                        return '<a href="<?= site_url('penyimpanan-peta/show/') ?>' + data + '"class="btn btn-success btn-sm mr-2"><i class="fas fa-folder"></i></a>';
+                        return '<a href="<?= site_url('penyimpanan-peta/show/') ?>' + data + '"class="btn btn-primary btn-sm mr-2"><i class="fas fa-folder"></i></a>';
                     }
                 },
             ],

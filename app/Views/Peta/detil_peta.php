@@ -15,37 +15,86 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-6">
             <div class="card card-primary">
-                <div class="card-header">
+                <!-- <div class="card-header">
                     <h4></h4>
                     <div class="card-header-action">
                         <div class="dropdown">
                             <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Options</a>
                             <div class="dropdown-menu">
-                                <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#pilih-pasien">Aw, yeah!</button> -->
                                 <a href="" data-toggle="modal" data-target="#modal-edit-peta" class="dropdown-item has-icon"><i class="far fa-edit"></i> Edit</a>
                                 <div class="dropdown-divider"></div>
-                                <!-- <a onclick="hapus()" class="dropdown-item has-icon text-danger btn-hapus"><i class="far fa-trash-alt"></i> Delete</a> -->
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="card-body">
-                    <dl class="row">
-                        <dt class="col-sm-4">Proyek</dt>
-                        <dd class="col-sm-8"><?= $peta->proyek ?></dd>
-                        <dt class="col-sm-4">Nomor Peta</dt>
-                        <dd class="col-sm-8"><?= $peta->nomor_peta ?></dd>
-                        <dt class="col-sm-4">Tahun </dt>
-                        <dd class="col-sm-8"><?= $peta->tahun ?></dd>
-                        <dt class="col-sm-4">Kecamatan</dt>
-                        <dd class="col-sm-8"><?= $peta->kecamatan ?></dd>
-                        <dt class="col-sm-4">Desa</dt>
-                        <dd class="col-sm-8"><?= $peta->desa ?></dd>
-                        <dt class="col-sm-4">Status Digitasi</dt>
-                        <dd class="col-sm-8 status">
-
-                        </dd>
-                    </dl>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active show" id="detil-tab" data-toggle="tab" href="#detil" role="tab" aria-controls="home" aria-selected="true">Detil Peta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Riwayat</a>
+                        </li>
+                    </ul>
+                    <!-- Tab Detil -->
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade active show" id="detil" role="tabpanel" aria-labelledby="detil-tab">
+                            <div class="row">
+                                <div class="card-header">
+                                    <h4></h4>
+                                    <div class="card-header-action">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Options</a>
+                                            <div class="dropdown-menu">
+                                                <a href="" data-toggle="modal" data-target="#modal-edit-peta" class="dropdown-item has-icon"><i class="far fa-edit"></i> Edit</a>
+                                                <div class="dropdown-divider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <dl class="row">
+                                <dt class="col-sm-4">Proyek</dt>
+                                <dd class="col-sm-8"><?= $peta->proyek ?></dd>
+                                <dt class="col-sm-4">Nomor Peta</dt>
+                                <dd class="col-sm-8"><?= $peta->nomor_peta ?></dd>
+                                <dt class="col-sm-4">Tahun </dt>
+                                <dd class="col-sm-8"><?= $peta->tahun ?></dd>
+                                <dt class="col-sm-4">Kecamatan</dt>
+                                <dd class="col-sm-8"><?= $peta->kecamatan ?></dd>
+                                <dt class="col-sm-4">Desa</dt>
+                                <dd class="col-sm-8"><?= $peta->desa ?></dd>
+                                <dt class="col-sm-4">Status Digitasi</dt>
+                                <dd class="col-sm-8">
+                                    <div class="badge  status"></div>
+                                    <?php if (has_permission('Hapus-Digitasi')) : ?>
+                                        <button class="btn btn-icon btn-danger btn-hapus-digitasi float-right" onclick="HapusDigitasi(<?= user_id() . ',' . $peta->id_peta ?>)" style="display: none;"><i class="fas fa-trash"></i></button>
+                                    <?php endif; ?>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- Tab Riwayat Download -->
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="table-responsive">
+                                <div id="table-1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="table table-striped dataTable no-footer display" id="table-riwayat" style="width:100%">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th>Tanggal</th>
+                                                        <th>Nama</th>
+                                                        <th>Jenis File</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,13 +103,12 @@
                 <div class="card-header">
                     <h4></h4>
                     <div class="card-header-action">
-                        <a hhref="" data-toggle="modal" data-target="#modal-upload-file-scan" class="btn btn-primary btn-icon btn-tambah-file-scan" hidden>Tambah</i></a>
+                        <a href="" data-toggle="modal" data-target="#modal-upload-file-scan" class="btn btn-primary btn-icon btn-tambah-file-scan" hidden>Tambah</i></a>
                         <div class="dropdown download-menu" hidden>
-                            <a href="#" data-toggle="dropdown" class="btn btn-success dropdown-toggle">Download</a>
+                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Download</a>
                             <div class="dropdown-menu ">
-                                <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#pilih-pasien">Aw, yeah!</button> -->
-                                <a href="<?= site_url('data-peta/download/' . $peta->id_peta) ?>" class="dropdown-item has-icon btn-download"><i class="fas fa-download"></i>Scan Peta</i></a>
-                                <a href="<?= site_url('data-peta/download-digitasi/' . $peta->id_peta) ?>" class="dropdown-item has-icon btn-download"><i class="fas fa-download"></i>Digitasi</i></a>
+                                <a href="<?= site_url('scan-peta-download/' . user_id() . '/' . $peta->id_peta) ?>" class="dropdown-item has-icon btn-download"><i class="fas fa-download"></i>Scan Peta</i></a>
+                                <a href="<?= site_url('digitasi-download/' . user_id() . '/' . $peta->id_peta) ?>" class="dropdown-item has-icon btn-download"><i class="fas fa-download"></i>Digitasi</i></a>
                                 <div class="dropdown-divider"></div>
                             </div>
                         </div>
@@ -72,9 +120,11 @@
                         <a href="/imageRender/<?= $file_name ?>" target="_blank"><img class="img-fluid" src="<?= $image_path ?>" /></a>
                     </div>
                     <div class="text-center pt-1 pb-1">
-                        <a onclick="hapus_gambar(<?= $peta->id_peta ?>)" class="btn btn-danger btn-round btn-hapus-scan" hidden>
-                            Hapus Gambar
-                        </a>
+                        <?php if (has_permission('Hapus-Peta')) : ?>
+                            <a onclick="hapus_gambar(<?= $peta->id_peta ?>)" class="btn btn-danger btn-round btn-hapus-scan" hidden>
+                                Hapus Gambar
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -112,11 +162,13 @@
                 $('#loader').css('display', 'none')
             },
             success: function(response) {
-                $('#proyek').val(response.data.proyek);
-                $('#nomor_peta').val(response.data.nomor_peta);
-                $('#tahun').val(response.data.tahun);
-                $('#kecamatan').val(response.data.kecamatan);
-                $('#desa').val(response.data.desa);
+                if (response.data.id_scan === null) {
+                    $('#proyek').val(response.data.proyek);
+                    $('#nomor_peta').val(response.data.nomor_peta);
+                    $('#tahun').val(response.data.tahun);
+                    $('#kecamatan').val(response.data.kecamatan);
+                    $('#desa').val(response.data.desa);
+                }
 
                 if (response.data.nama_file === null) {
                     $('.btn-tambah-file-scan').prop('hidden', false)
@@ -130,12 +182,16 @@
                     $('.btn-hapus-scan').prop('hidden', false)
                     $('.download-menu').prop('hidden', false)
                     $('.btn-upload-digitasi').prop('hidden', true)
-                    if (response.data.status === 'Belum Tedudukan') {
+                    if (response.data.status === 'Belum Terdudukan') {
                         $('.status').prop('hidden', false)
-                        $('.status').html(' <div class="badge badge-warning">Belum Terdudukan</div>')
+                        $('.status').addClass('badge-danger')
+                        $('.status').html('Belum Terdudukan')
+                        $('.btn-hapus-digitasi').show()
                     } else {
                         $('.status').prop('hidden', false)
-                        $('.status').html(' <div class="badge badge-success">Sudah Terdudukan</div>')
+                        $('.status').html('Sudah Terdudukan')
+                        $('.status').addClass('badge-success')
+                        $('.btn-hapus-digitasi').show()
                     }
                 } else {
                     $('.btn-tambah-file-scan').prop('hidden', false)
@@ -146,6 +202,92 @@
                 alert('gagal updated')
             }
         });
+
+        // datatables riwayat
+        $('#table-riwayat').DataTable({
+            'processing': true,
+            'serverside': true,
+            'serveMethod': 'post',
+            'lengthMenu': [
+                [10, 25, 50, -1],
+                [10, 25, 50, 'All'],
+            ],
+            "searching": false,
+            'ajax': {
+                url: '<?= site_url('api-peta/' . $peta->id_peta . '/detil') ?>',
+                dataSrc: 'riwayat'
+            },
+            'columns': [{
+                    data: 'tanggal',
+                    render: function(data, row, type) {
+                        let date = new Date(data);
+
+                        return date.toLocaleDateString();
+                    }
+
+                },
+                {
+                    data: 'nama'
+                },
+                {
+                    data: 'jenis_file',
+                    render: function(data, row, type) {
+                        if (data == 0) {
+                            return 'Digitasi - dwg'
+                        } else {
+                            return 'Scan Peta - gambar'
+                        }
+                    }
+                },
+                {
+                    data: 'aksi',
+                    render: function(data, row, type) {
+                        switch (data) {
+                            case '0':
+                                return 'Download';
+                                break;
+                            case '1':
+                                return 'Upload';
+                                break;
+                            case '2':
+                                return 'Hapus';
+                                break;
+                            default:
+                                return 'Tidak ada nilai';
+                        }
+                    }
+                },
+
+            ],
+        });
+
+        // mengisi form tambah peta scan
+        // $.ajax({
+        //     type: "get",
+        //     url: "<?= site_url('api-peta/') ?>" + id + "/detil",
+        //     data: '',
+        //     dataType: "json",
+        //     // beforeSend: function() {
+        //     //     $('.loader').css('display', 'block')
+        //     // },
+        //     complete: function() {
+        //         $('#loader').css('display', 'none')
+        //     },
+        //     success: function(response) {
+        //         if (response.data.id_scan === null) {
+        //             $('#proyek').val(response.data.proyek);
+        //             $('#nomor_peta').val(response.data.nomor_peta);
+        //             $('#tahun').val(response.data.tahun);
+        //             $('#kecamatan').val(response.data.kecamatan);
+        //             $('#desa').val(response.data.desa);
+        //         }
+        //     },
+        //     error: function(response) {
+        //         alert('gagal updated')
+        //     }
+        // });
+
+
     });
 
     (function() {
@@ -224,7 +366,12 @@
                                 });
                         },
                         error: function(response) {
-                            console.log('gagal')
+                            if (response.responseJSON.messages.file_scan) {
+                                $('#file-scan').addClass('is-invalid');
+                                $('.error-file-scan').html(response.responseJSON.messages.file_scan);
+                            } else {
+                                $('#file_scan').removeClass('is-invalid');
+                            }
                         }
                     });
                 } else {
@@ -269,7 +416,12 @@
                                 });
                         },
                         error: function(response) {
-                            console.log(response)
+                            if (response.responseJSON.messages.file_digitasi) {
+                                $('#file-digitasi').addClass('is-invalid');
+                                $('.error-file-digitasi').html(response.responseJSON.messages.file_digitasi);
+                            } else {
+                                $('#file-digitasi').removeClass('is-invalid');
+                            }
                         }
                     });
                 } else {
@@ -340,6 +492,76 @@
                         },
                         error: function(response) {
                             console.log(response)
+                        }
+                    });
+                } else {
+
+                }
+            });
+    }
+
+    // hapus digitasi
+    function HapusDigitasi(user_id, id) {
+        swal({
+                title: 'Apakah Anda Yakin?',
+                text: 'Anda akan menghapus gambar.',
+                icon: 'warning',
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    $.ajax({
+                        type: "post",
+                        url: "<?= site_url('digitasi-hapus/') ?>" + user_id + '/' + id,
+                        dataType: "json",
+                        success: function(response) {
+                            swal('Berhasil', 'Data berhasil dihapus.', 'success')
+                                .then(() => {
+                                    // refresh halaman
+                                    location.assign('<?= previous_url($returnObject = true) ?>')
+
+                                });
+                        },
+                        error: function(response) {
+                            console.log(id)
+                        }
+                    });
+                } else {
+
+                }
+            });
+    }
+
+    // download Peta
+    function DownloadDigitasi(user_id, id_peta) {
+        swal({
+                title: 'Apakah Anda Yakin?',
+                text: 'Anda akan menghapus gambar.',
+                icon: 'warning',
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    $.ajax({
+                        type: "get",
+                        url: "<?= site_url('digitasi/download/') ?>" + '/' + user_id + '/' + id_peta,
+                        // data: jQuery.param({
+                        //     user_id: user_id,
+                        //     id_peta: id_peta,
+                        // }),
+                        dataType: "json",
+                        success: function(response) {
+                            swal('Berhasil', 'Data berhasil dihapus.', 'success')
+                                .then(() => {
+                                    // refresh halaman
+                                    // location.assign('<?= previous_url($returnObject = true) ?>')
+                                    console.log(data)
+                                });
+                        },
+                        error: function(response) {
+                            console.log(id)
                         }
                     });
                 } else {

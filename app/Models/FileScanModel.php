@@ -26,8 +26,16 @@ class FileScanModel extends Model
     protected $deletedField  = 'deleted_at';
 
     // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
+    protected $validationRules      = [
+        'nama_file'          => 'required|mime_in[image/jpg,image/jpeg,image/gif,image/png]',
+        'fk_peta'          => 'required',
+    ];
+    protected $validationMessages   = [
+        'nama_file' => [
+            'required' => 'Harus diisi.',
+            'mime_in[image/jpg,image/jpeg,image/gif,image/png]' => 'File yang diupload bukan gambar.'
+        ]
+    ];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
 

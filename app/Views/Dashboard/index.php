@@ -5,14 +5,31 @@
     <h1><?= $title ?></h1>
 </div>
 <div class="row">
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <a href="<?= site_url('penyimpanan-peta') ?>">
-                <div class="card-icon bg-primary">
-                    <i class="fas fa-archive"></i>
+
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+            <div class="card-stats">
+                <div class="card-stats-title">Data Scan Peta
+
                 </div>
-            </a>
+                <div class="card-stats-items">
+                    <div class="card-stats-item">
+
+                        <div class="card-stats-item-count"><?= $j_peta_upload ?></div>
+                        <div class="card-stats-item-label">Upload</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-icon shadow-primary bg-primary">
+                <a href="<?= site_url('penyimpanan-peta') ?>">
+                    <i class="fas fa-archive"></i>
+                </a>
+
+            </div>
+
             <div class="card-wrap">
+
                 <div class="card-header">
                     <h4>Jumlah Data Scan Peta</h4>
                 </div>
@@ -22,30 +39,26 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <a href="<?= site_url('scan-uploaded') ?>">
-                <div class="card-icon bg-danger">
-                    <i class="far fa-newspaper"></i>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="card card-statistic-2">
+            <div class="card-stats">
+                <div class="card-stats-title">Data Digitasi
                 </div>
-            </a>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>Jumlah Upload Peta</h4>
-                </div>
-                <div class="card-body">
-                    <?= $j_peta_upload ?>
+                <div class="card-stats-items">
+                    <div class="card-stats-item">
+                        <div class="card-stats-item-count"><?= $j_terdudukan ?></div>
+                        <div class="card-stats-item-label">Terdudukan</div>
+                    </div>
+                    <div class="card-stats-item">
+                        <div class="card-stats-item-count"><?= $j_belum_terdudukan ?></div>
+                        <div class="card-stats-item-label">Belum <br> Terdudukan</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <a href="<?= site_url('digitasi/show') ?>">
-                <div class="card-icon bg-warning">
-                    <i class="far fa-file"></i>
-                </div>
-            </a>
+            <div class="card-icon shadow-primary bg-primary">
+                <i class="fas fa-archive"></i>
+            </div>
+
             <div class="card-wrap">
                 <div class="card-header">
                     <h4>Jumlah Digitasi</h4>
@@ -54,6 +67,7 @@
                     <?= $j_digitasi ?>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

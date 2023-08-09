@@ -28,8 +28,27 @@ class DokumenModel extends Model
     protected $deletedField  = 'deleted_at';
 
     // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
+    protected $validationRules      = [
+        'fk_jenis_dokumen'          => 'required',
+        'nama_dokumen'          => 'required',
+        'keterangan'          => 'required',
+        'file_dokumen'          => 'required|mime_in[file_dokumen,application/pdf]',
+    ];
+    protected $validationMessages   = [
+        'fk_jenis_dokumen' => [
+            'required' => 'Harus diisi.',
+        ],
+        'nama_dokumen' => [
+            'required' => 'Harus diisi.',
+        ],
+        'keterangan' => [
+            'required' => 'Harus diisi.',
+        ],
+        'file_dokumen' => [
+            'required' => 'Harus diisi.',
+            'mime_in[application/pdf]' => 'File yang diunggah harus pdf.',
+        ],
+    ];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
 

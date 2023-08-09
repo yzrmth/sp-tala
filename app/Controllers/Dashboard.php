@@ -29,7 +29,9 @@ class Dashboard extends ResourceController
             'title' => 'Dashboard',
             'j_peta' => $this->PetaModel->countAllResults(),
             'j_peta_upload' => $this->FileScanModel->countAllResults(),
-            'j_digitasi' => $this->FileDigitasiModel->countAllResults(),
+            'j_digitasi' => $this->FileDigitasiModel->countDigitasi(),
+            'j_terdudukan' => $this->FileDigitasiModel->countTerdudukan(),
+            'j_belum_terdudukan' => $this->FileDigitasiModel->countBelumTerdudukan()
         ];
         return view('Dashboard/index', $data);
     }
@@ -45,9 +47,8 @@ class Dashboard extends ResourceController
     public function dataDigitasi()
     {
         $data = [
-            'data' => $this->FileDigitasiModel->findAll()
+            'data' => $this->FileDigitasiModel->findAll(),
         ];
-
         if ($data) {
             return $this->respond($data, 200);
         } else {

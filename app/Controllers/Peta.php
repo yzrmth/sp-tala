@@ -7,7 +7,9 @@ use App\Entities\PetaEntity;
 use App\Models\FileDigitasiModel;
 use App\Models\FileScanModel;
 use App\Models\PetaModel;
+use App\Models\RiwayatModel;
 use CodeIgniter\RESTful\ResourceController;
+use Config\Validation;
 
 class Peta extends ResourceController
 {
@@ -23,6 +25,8 @@ class Peta extends ResourceController
     protected $PetaEntity;
     protected $FileScanModel;
     protected $FileDigitasiModel;
+    protected $RiwayatModel;
+
 
     public function __construct()
     {
@@ -30,6 +34,7 @@ class Peta extends ResourceController
         $this->PetaEntity = new PetaEntity();
         $this->FileScanModel = new FileScanModel();
         $this->FileDigitasiModel = new FileDigitasiModel();
+        $this->RiwayatModel = new RiwayatModel();
     }
     public function index()
     {
@@ -49,6 +54,7 @@ class Peta extends ResourceController
             $data = [
                 'title' => 'Rincian Peta',
                 'peta' => $this->PetaModel->get_peta($id),
+                'riwayat' => $this->RiwayatModel->getRiwayat($id),
                 'image_path' => img_data(WRITEPATH . 'storage/file_scan/' . $fileName),
                 'file_name' => $fileName,
                 'message' => 200,
@@ -57,11 +63,13 @@ class Peta extends ResourceController
             $data = [
                 'title' => 'Rincian Peta',
                 'peta' => $this->PetaModel->get_peta($id),
+                'riwayat' => $this->RiwayatModel->getRiwayat($id),
                 'image_path' => img_data(WRITEPATH . 'storage/file_scan/no_image.png'),
                 'file_name' => $fileName,
                 'message' => 500,
             ];
         }
+        // dd($data);
         return view('Peta/detil_peta', $data);
     }
 
@@ -110,16 +118,48 @@ class Peta extends ResourceController
         $id_scan = $data->id_scan;
         $fileName = $data->nama_file;
 
-        unlink(WRITEPATH . 'storage/file_scan/' . $fileName);
-        unlink(WRITEPATH . 'storage/original_file/' . $fileName);
         $delete = $this->FileScanModel->delete($id_scan);
         if (!$delete) {
+            unlink(WRITEPATH . 'storage/file_scan/' . $fileName);
+            unlink(WRITEPATH . 'storage/original_file/' . $fileName);
             return $this->fail($this->FileScanModel->errors(), 400);
         } else {
             return $this->respond([
                 'statusCode' => 200,
                 'message'    => 'OK',
                 'data'       => $this->PetaModel->get_peta($id),
+            ]);
+        }
+    }
+
+    public function delete_digitasi($user_id, $id_peta)
+    {
+        // mengambil semua data yang dijoin
+        $data = $this->PetaModel->get_peta($id_peta);
+        // mengambil data id_scan dari hasil join 
+        $id_digitasi = $data->id_digitasi;
+        $fileName = $data->nama_file_digitasi;
+
+        $data_riwayat = [
+            'fk_user' => $user_id,
+            'fk_peta' => $id_peta,
+            'jenis_file' => 0, /*jika 0 = dwg, 1 = scan peta(gambar)*/
+            'nama_file' => $fileName,
+            'aksi' => 2, /*jika 0 = download 1=upload 2=hapus*/
+            'tanggal' => date('Y-m-d'),
+            'keterangan' => 'Untuk data tes'
+        ];
+
+        $result = $this->FileDigitasiModel->Hapus($data_riwayat, $id_digitasi);
+
+        if (!$result) {
+            unlink(WRITEPATH . 'storage/file_digitasi/' . $fileName);
+            return $this->fail($this->FileDigitasiModel->errors(), 400);
+        } else {
+            return $this->respond([
+                'statusCode' => 200,
+                'message'    => 'OK',
+                'data'       => $id_digitasi,
             ]);
         }
     }
@@ -146,6 +186,7 @@ class Peta extends ResourceController
         if (file_exists(WRITEPATH . 'storage/file_scan/' . $fileName)) {
             $data = [
                 'data' => $this->PetaModel->get_peta($id),
+                'riwayat' => $this->RiwayatModel->getRiwayat($id),
                 'status' => 200
             ];
         } else {
@@ -162,20 +203,51 @@ class Peta extends ResourceController
         }
     }
 
-    public function do_download($id = null)
+    public function do_download($user_id, $id_peta)
     {
-        $file = $this->PetaModel->get_peta($id);
-
+        $file = $this->PetaModel->get_peta($id_peta);
         $fileName = $file->nama_file;
-        return $this->response->download(WRITEPATH . 'storage/original_file/' . $fileName, null);
+
+        $data = [
+            'fk_user' => $user_id,
+            'fk_peta' => $id_peta,
+            'jenis_file' => 1, /*jika 0 = dwg, 1 = scan peta(gambar)*/
+            'nama_file' => $fileName,
+            'aksi' => 0, /*jika 0 = download 1=upload 2=hapus*/
+            'tanggal' => date('Y-m-d'),
+            'keterangan' => 'Untuk data tes'
+        ];
+
+        $result = $this->RiwayatModel->save($data);
+        if ($result) {
+            return $this->response->download(WRITEPATH . 'storage/original_file/' . $fileName, null);
+        } else {
+            return $this->RiwayatModel->errors();
+        }
     }
 
-    public function do_download_digitasi($id = null)
+    public function do_download_digitasi($user_id, $id_peta)
     {
-        $file = $this->PetaModel->get_peta($id);
 
+        $file = $this->PetaModel->get_peta($id_peta);
         $fileName = $file->nama_file_digitasi;
-        return $this->response->download(WRITEPATH . 'storage/file_digitasi/' . $fileName, null);
+
+        $data = [
+            'fk_user' => $user_id,
+            'fk_peta' => $id_peta,
+            'jenis_file' => 0,
+            'nama_file' => $fileName,
+            'aksi' => 0,
+            'tanggal' => date('Y-m-d'),
+            'keterangan' => 'Untuk data tes'
+        ];
+
+        $result = $this->RiwayatModel->save($data);
+        if ($result) {
+            return $this->response->download(WRITEPATH . 'storage/file_digitasi/' . $fileName, null);
+        } else {
+            return $this->RiwayatModel->errors();
+        }
     }
 
     public function image_preview($id)
@@ -229,6 +301,22 @@ class Peta extends ResourceController
 
     public function upload_image($id = null)
     {
+        // <-- VALIDASI FILE GAMMBAR -->
+        $validation = \config\Services::validation();
+        $validate = $this->validate([
+            'file_scan' => [
+                'rules' => 'ext_in[file_scan,jpg,png,JPG,PNG]',
+                'errors' => [
+                    'required' => 'harus diisi.',
+                    'mime_in' => 'File yang diunggah harus gambar. jpg/png'
+                ]
+            ]
+        ]);
+
+        if (!$validate) {
+            return $this->fail($validation->getErrors());
+        }
+
         $file = $this->request->getFile('file_scan');
         $fileName = $this->request->getPost('nama_file');
         $extention = $file->getExtension();
@@ -248,7 +336,18 @@ class Peta extends ResourceController
             'nama_file' => $_fileName_
         ];
 
-        $result = $this->PetaModel->upload_peta($data_scan, $this->PetaEntity);
+        // data untuk insert ke table tb_riwayat
+        $data_riwayat = [
+            'fk_user' => $this->request->getPost('user_id'),
+            'fk_peta' => $this->request->getPost('id_peta'),
+            'jenis_file' => 1, /*jika 0 = dwg, 1 = scan peta(gambar)*/
+            'nama_file' => $fileName,
+            'aksi' => 1, /*jika 0 = download 1=upload 2=hapus*/
+            'tanggal' => date('Y-m-d'),
+            'keterangan' => 'Untuk data tes'
+        ];
+
+        $result = $this->PetaModel->upload_peta($data_scan, $this->PetaEntity, $data_riwayat);
 
         if ($result === false) {
             return $this->fail($this->FileScanModel->errors(), 400);
@@ -272,16 +371,45 @@ class Peta extends ResourceController
     public function upload_digitasi($id = null)
     {
         $file = $this->request->getFile('file_digitasi');
+
+        // VALIDASI FILE DIGITASI
+        $validation = \config\Services::validation();
+        $validate = $this->validate([
+            'file_digitasi' => [
+                'rules' => 'ext_in[file_digitasi,dwg]',
+                'errors' => [
+                    'ext_in' => 'File yang diunggah bukan DWG'
+                ]
+            ]
+        ]);
+
+        if (!$validate) {
+            return $this->fail($validation->getErrors());
+        }
+
+        $file = $this->request->getFile('file_digitasi');
         $fileName = $this->request->getPost('nama_file');
         $extention = $file->getExtension();
 
-        $save = $this->FileDigitasiModel->save([
+        $data = [
             'fk_peta' => $this->request->getPost('id_peta'),
             'nama_file_digitasi' => $fileName . '.' . $extention,
             'status' => $this->request->getPost('status')
-        ]);
+        ];
 
-        if (!$save) {
+        $data_riwayat = [
+            'fk_user' => $this->request->getPost('user_id'),
+            'fk_peta' => $this->request->getPost('id_peta'),
+            'jenis_file' => 0, /*jika 0 = dwg, 1 = scan peta(gambar)*/
+            'nama_file' => $fileName,
+            'aksi' => 1, /*jika 0 = download 1=upload 2=hapus*/
+            'tanggal' => date('Y-m-d'),
+            'keterangan' => 'Untuk data tes'
+        ];
+
+        $result = $this->FileDigitasiModel->Upload($data_riwayat, $data);
+
+        if (!$result) {
             return $this->fail($this->FileDigitasiModel->errors(), 400);
         } else {
             $file->move(WRITEPATH . 'storage\file_digitasi', $fileName . '.' . $extention);

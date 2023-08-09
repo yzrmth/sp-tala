@@ -42,7 +42,7 @@
                             <a href="<?= site_url('pdfRender/' . $filepath) ?>" target="_blank" class=" btn btn-primary">Lihat Dokumen</a>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <embed class="embed-responsive-item" type="application/pdf" src="/pdfRender/<?= $filepath ?>" allowfullscreen></embed>
+                            <iframe src="<?= site_url('pdfRender/' . $filepath) ?>" title="W3Schools Free Online Web Tutorials"></iframe>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,12 @@
                                 });
                         },
                         error: function(response) {
-                            console.log('gagal')
+                            if (response.responseJSON.messages.fk_jenis_dokumen) {
+                                $('#JenisDokumen').addClass('is-invalid');
+                                $('.error-jenis-dokumen').html(response.responseJSON.messages.fk_jenis_dokumen);
+                            } else {
+                                $('#jenisDokumen').removeClass('is-invalid');
+                            }
                         }
                     });
                 } else {

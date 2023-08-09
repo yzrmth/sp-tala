@@ -15,6 +15,7 @@
                             <select class="form-control" id="JenisDokumen" name="fk_jenis_dokumen">
                                 <option value="">--Pilih Jenis Dokumen--</option>
                             </select>
+                            <div class="invalid-feedback error-jenis-dokumen"></div>
                         </div>
                         <button type="button" class="btn btn-primary" onclick="showModalJenisDokumen()"><i class="fas fa-plus"></i></button>
                     </div>
@@ -30,7 +31,7 @@
                     </div>
                     <div class="form-group ">
                         <label for=" file_dokumen">Lampiran</label>
-                        <input type="file" class="form-control" id="file_dokumen" name="file_dokumen">
+                        <input type="file" class="form-control" id="file-dokumen" name="file_dokumen">
                         <div class="invalid-feedback error-file-dokumen"></div>
                     </div>
                     <div class="modal-footer bg-whitesmoke br">

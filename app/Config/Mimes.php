@@ -22,6 +22,10 @@ class Mimes
      * Map of extensions to mime types.
      */
     public static array $mimes = [
+        'dwg' => [
+            'image/vnd.dwg',
+            'application/octet-stream'
+        ],
         'hqx' => [
             'application/mac-binhex40',
             'application/mac-binhex',
@@ -490,7 +494,7 @@ class Mimes
     {
         $extension = trim(strtolower($extension), '. ');
 
-        if (! array_key_exists($extension, static::$mimes)) {
+        if (!array_key_exists($extension, static::$mimes)) {
             return null;
         }
 
