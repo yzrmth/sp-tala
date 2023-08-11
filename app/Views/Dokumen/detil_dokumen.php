@@ -42,7 +42,7 @@
                             <a href="<?= site_url('pdfRender/' . $filepath) ?>" target="_blank" class=" btn btn-primary">Lihat Dokumen</a>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="<?= site_url('pdfRender/' . $filepath) ?>" title="W3Schools Free Online Web Tutorials"></iframe>
+                            <iframe src="<?= site_url('pdfRender/' . $filepath) ?>" title="W3Schools Free Online Web Tutorials" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -86,35 +86,34 @@
     // delete data
     function hapus(id) {
         swal({
-                title: 'Apakah Anda Yakin?',
-                text: 'Anda akan menghapus data,',
-                icon: 'warning',
-                buttons: true,
-                dangerMode: true,
-            })
-            .then((willDelete) => {
-                if (willDelete) {
-                    $.ajax({
-                        type: "post",
-                        url: "<?= site_url('dokumen/delete/') ?>" + id,
-                        dataType: "json",
-                        success: function(response) {
-                            swal('Berhasil', 'Data berhasil dihapus.', 'success')
-                                .then(() => {
-                                    // refresh halaman
-                                    location.assign('<?= previous_url($returnObject = true) ?>')
-                                });
-                        },
-                        error: function(response) {
-                            alert(response)
-                        }
-                    });
-                } else {
+            title: ' Apakah Anda Yakin?',
+            text: 'Anda akan menghapus data,',
+            icon: 'warning',
+            buttons: true,
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                $.ajax({
+                    type: "post",
+                    url: "<?= site_url('dokumen/delete/') ?>" + id,
+                    dataType: "json",
+                    success: function(response) {
+                        swal('Berhasil', 'Data berhasil dihapus.', 'success')
+                            .then(() => {
+                                // refresh halaman
+                                location.assign('<?= previous_url($returnObject = true) ?>')
+                            });
+                    },
+                    error: function(response) {
+                        alert(response)
+                    }
+                });
+            } else {
 
-                }
-            });
+            }
+        });
     }
-    // RENDER EDIT FORM 
+    // RENDER EDIT FORM
     function edit(id) {
         $.ajax({
             type: "get",

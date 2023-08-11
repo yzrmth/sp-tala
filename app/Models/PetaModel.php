@@ -87,9 +87,6 @@ class PetaModel extends Model
         // insert data ke table scan peta
         $RiwayatModel->insert($data_riwayat);
 
-
-
-
         $this->db->transCommit();
         if ($this->db->transStatus() === false) {
             $this->db->transRollback();

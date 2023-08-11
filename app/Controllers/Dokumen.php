@@ -43,6 +43,11 @@ class Dokumen extends ResourceController
         $this->DokumenEntity->keterangan = $this->request->getPost('keterangan');
         $file = $this->request->getFile('file_dokumen');
 
+        // CEK APAKAH ADA FILE YANG DIUPLOAD ATAU TIDAK
+        if ($file->getError() == 4) {
+            return $this->failValidationError($messages = 'Tidak ada file yang diupload');
+        }
+
         // NAMA FILE DOKUMEN
         $this->DokumenEntity->file_dokumen = $this->request->getPost('nama_dokumen');
         $extention = $file->getExtension();

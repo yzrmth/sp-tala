@@ -56,4 +56,28 @@ class FileScanModel extends Model
             ->join('tb_peta_scan', 'tb_image_scan.fk_peta=tb_peta_scan.id_peta', 'left')
             ->get()->getResult();
     }
+
+
+    // Hapus File Scan Peta Menggunakan transaction
+    public function Hapus($data_riwayat, $id_scan)
+    {
+        $RiwayatModel = $this->db->table('tb_riwayat');
+
+        $this->db->transBegin();
+        // hapus data di table digitasi
+        $this->delete($id_scan);
+
+        // insert data ke table scan riwayat
+        $RiwayatModel->insert($data_riwayat);
+
+
+        $this->db->transCommit();
+        if ($this->db->transStatus() === false) {
+            $this->db->transRollback();
+            return false;
+        } else {
+            $this->db->transCommit();
+            return true;
+        }
+    }
 }

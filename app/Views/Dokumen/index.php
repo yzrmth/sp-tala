@@ -198,9 +198,15 @@
                             } else {
                                 $('#keterangan').removeClass('is-invalid');
                             }
-                            if (response.responseJSON.messages.file_dokumen) {
+                            // if (response.responseJSON.messages.file_dokumen) {
+                            //     $('#file-dokumen').addClass('is-invalid');
+                            //     $('.error-file-dokumen').html(response.responseJSON.messages.file_dokumen);
+                            // } else {
+                            //     $('#file-dokumen').removeClass('is-invalid');
+                            // }
+                            if (response.responseJSON.messages.error) {
                                 $('#file-dokumen').addClass('is-invalid');
-                                $('.error-file-dokumen').html(response.responseJSON.messages.file_dokumen);
+                                $('.error-file-dokumen').html(response.responseJSON.messages.error);
                             } else {
                                 $('#file-dokumen').removeClass('is-invalid');
                             }

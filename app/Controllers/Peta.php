@@ -110,16 +110,27 @@ class Peta extends ResourceController
         }
     }
 
-    public function delete_image($id = null)
+    public function delete_image($user_id, $id_peta)
     {
         // mengambil semua data yang dijoin
-        $data = $this->PetaModel->get_peta($id);
+        $data = $this->PetaModel->get_peta($id_peta);
         // mengambil data id_scan dari hasil join 
         $id_scan = $data->id_scan;
         $fileName = $data->nama_file;
 
-        $delete = $this->FileScanModel->delete($id_scan);
-        if (!$delete) {
+        $data_riwayat = [
+            'fk_user' => $user_id,
+            'fk_peta' => $id_peta,
+            'jenis_file' => 1, /*jika 0 = dwg, 1 = scan peta(gambar)*/
+            'nama_file' => $fileName,
+            'aksi' => 2, /*jika 0 = download 1=upload 2=hapus*/
+            'tanggal' => date('Y-m-d'),
+            'keterangan' => 'Untuk data tes'
+        ];
+
+        $result = $this->FileScanModel->Hapus($data_riwayat, $id_scan);
+
+        if (!$result) {
             unlink(WRITEPATH . 'storage/file_scan/' . $fileName);
             unlink(WRITEPATH . 'storage/original_file/' . $fileName);
             return $this->fail($this->FileScanModel->errors(), 400);
@@ -127,7 +138,7 @@ class Peta extends ResourceController
             return $this->respond([
                 'statusCode' => 200,
                 'message'    => 'OK',
-                'data'       => $this->PetaModel->get_peta($id),
+                'data'       => $this->PetaModel->get_peta($id_peta),
             ]);
         }
     }

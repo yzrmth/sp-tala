@@ -121,7 +121,7 @@
                     </div>
                     <div class="text-center pt-1 pb-1">
                         <?php if (has_permission('Hapus-Peta')) : ?>
-                            <a onclick="hapus_gambar(<?= $peta->id_peta ?>)" class="btn btn-danger btn-round btn-hapus-scan" hidden>
+                            <a onclick="hapus_gambar(<?= user_id() . ',' . $peta->id_peta ?>)" class="btn btn-danger btn-round btn-hapus-scan" hidden>
                                 Hapus Gambar
                             </a>
                         <?php endif; ?>
@@ -224,7 +224,6 @@
 
                         return date.toLocaleDateString();
                     }
-
                 },
                 {
                     data: 'nama'
@@ -260,34 +259,6 @@
 
             ],
         });
-
-        // mengisi form tambah peta scan
-        // $.ajax({
-        //     type: "get",
-        //     url: "<?= site_url('api-peta/') ?>" + id + "/detil",
-        //     data: '',
-        //     dataType: "json",
-        //     // beforeSend: function() {
-        //     //     $('.loader').css('display', 'block')
-        //     // },
-        //     complete: function() {
-        //         $('#loader').css('display', 'none')
-        //     },
-        //     success: function(response) {
-        //         if (response.data.id_scan === null) {
-        //             $('#proyek').val(response.data.proyek);
-        //             $('#nomor_peta').val(response.data.nomor_peta);
-        //             $('#tahun').val(response.data.tahun);
-        //             $('#kecamatan').val(response.data.kecamatan);
-        //             $('#desa').val(response.data.desa);
-        //         }
-        //     },
-        //     error: function(response) {
-        //         alert('gagal updated')
-        //     }
-        // });
-
-
     });
 
     (function() {
@@ -469,7 +440,7 @@
     }
 
     // ajax hapus gambar
-    function hapus_gambar(id) {
+    function hapus_gambar(user_id, id) {
         swal({
                 title: 'Apakah Anda Yakin?',
                 text: 'Anda akan menghapus gambar.',
@@ -481,7 +452,7 @@
                 if (willDelete) {
                     $.ajax({
                         type: "post",
-                        url: "<?= site_url('data-peta/image-delete/') ?>" + id,
+                        url: "<?= site_url('scan-hapus/') ?>" + user_id + '/' + id,
                         dataType: "json",
                         success: function(response) {
                             swal('Berhasil', 'Data berhasil dihapus.', 'success')

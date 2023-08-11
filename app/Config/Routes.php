@@ -66,7 +66,9 @@ $routes->get('data-peta', 'Peta::dataPeta');
 $routes->get('scan-peta-download/(:num)/(:num)', 'Peta::do_download/$1/$2');
 
 $routes->get('digitasi-download/(:num)/(:num)', 'Peta::do_download_digitasi/$1/$2');
-$routes->post('data-peta/image-delete/(:num)', 'Peta::delete_image/$1');
+// $routes->post('data-peta/image-delete/(:num)', 'Peta::delete_image/$1');
+$routes->post('scan-hapus/(:num)/(:num)', 'Peta::delete_image/$1/$2');
+
 $routes->post('penyimpanan-peta/upload/(:num)', 'Peta::upload_image/$1');
 $routes->post('penyimpanan-peta/upload-digitasi/(:num)', 'Peta::upload_digitasi/$1');
 

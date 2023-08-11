@@ -54,8 +54,8 @@ class PenggunaModel extends Model
     public function get_user($id = null)
     {
         return $this->select('nama,nip, jabatan, username, email,  active,description, gs.group_id, gs.user_id, g.name')
-            ->join('auth_groups_users gs', 'users.id=gs.user_id')
-            ->join('auth_groups g', 'g.id = gs.group_id')
+            ->join('auth_groups_users gs', 'users.id=gs.user_id', 'left')
+            ->join('auth_groups g', 'g.id = gs.group_id', 'left')
             ->find($id);
     }
 

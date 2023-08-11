@@ -32,7 +32,7 @@ class DokumenModel extends Model
         'fk_jenis_dokumen'          => 'required',
         'nama_dokumen'          => 'required',
         'keterangan'          => 'required',
-        'file_dokumen'          => 'required|mime_in[file_dokumen,application/pdf]',
+        'file_dokumen'          => 'required|mime_in[file_dokumen,application/pdf,csv,ppt,doc,xls]',
     ];
     protected $validationMessages   = [
         'fk_jenis_dokumen' => [

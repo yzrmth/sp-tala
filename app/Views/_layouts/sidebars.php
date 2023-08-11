@@ -5,7 +5,7 @@
     <?php endif; ?>
 
     <li class="dropdown">
-        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Penyimpanan</span></a>
+        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-archive"></i> <span>Penyimpanan</span></a>
         <?php if (has_permission('penyimpanan-peta')) : ?>
             <ul class="dropdown-menu">
                 <li><a class="nav-link" href="<?= site_url('penyimpanan-peta') ?>">Peta</a></li>
