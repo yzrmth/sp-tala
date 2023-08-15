@@ -74,26 +74,29 @@
                             </dl>
                         </div>
                         <!-- Tab Riwayat Download -->
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="table-responsive">
-                                <div id="table-1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <table class="table table-striped dataTable no-footer display" id="table-riwayat" style="width:100%">
-                                                <thead>
-                                                    <tr role="row">
-                                                        <th>Tanggal</th>
-                                                        <th>Nama</th>
-                                                        <th>Jenis File</th>
-                                                        <th>Aksi</th>
-                                                    </tr>
-                                                </thead>
-                                            </table>
+                        <?php if (has_permission('Riwayat')) : ?>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="table-responsive">
+                                    <div id="table-1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <table class="table table-striped dataTable no-footer display" id="table-riwayat" style="width:100%">
+                                                    <thead>
+                                                        <tr role="row">
+                                                            <th>Tanggal</th>
+                                                            <th>Nama</th>
+                                                            <th>Jenis File</th>
+                                                            <th>Aksi</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
+
                     </div>
                 </div>
             </div>
